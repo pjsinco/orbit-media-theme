@@ -45,6 +45,13 @@
     font-size: 16px;
     line-height: 23px;
 
+    @media (min-width: $screen-sm-min) {
+
+        margin-bottom: .75em;
+        font-size: 18px;
+        line-height: 25px;
+    }
+
     @media (min-width: $screen-md-min) {
         margin-bottom: 1em;
         font-size: 21px;
@@ -97,6 +104,16 @@
 }
 
 .hero--form--inner {
+    .searchclear {
+        position: absolute;
+        right: 16px;
+        top: 6px;
+        bottom: 0;
+        display: none;
+        font-size: 2.5em;
+        color: #ccc;
+        cursor: pointer;
+    }
 
     @media (min-width: $screen-sm-min) {
         display: table-cell;
@@ -133,6 +150,10 @@
         line-height: 1.4;
         background-color: #f1f1f1;
         border: none;
+
+        @media (min-width: $screen-md-min) {
+            font-size: 18px;
+        }
 
 //        @media (max-width: $screen-sm-min) {
 //            margin-bottom: 10px;

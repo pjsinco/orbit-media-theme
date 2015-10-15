@@ -9736,6 +9736,14 @@ button.search:hover {
   /*font-size: 25px;*/
   /*}*/
 }
+@media (min-width: 768px) {
+  /* line 40, ../sass/features/_heroForm.scss */
+  .hero--message {
+    margin-bottom: .75em;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
 @media (min-width: 992px) {
   /* line 40, ../sass/features/_heroForm.scss */
   .hero--message {
@@ -9745,7 +9753,7 @@ button.search:hover {
   }
 }
 
-/* line 64, ../sass/features/_heroForm.scss */
+/* line 71, ../sass/features/_heroForm.scss */
 .hero--title {
   font-family: "gothammedium", Helvetica, sans-serif;
   font-weight: 500;
@@ -9757,68 +9765,79 @@ button.search:hover {
   color: #fff;
 }
 @media (max-width: 768px) {
-  /* line 64, ../sass/features/_heroForm.scss */
+  /* line 71, ../sass/features/_heroForm.scss */
   .hero--title {
     padding-top: 5px;
     padding-bottom: 0;
   }
 }
 @media (min-width: 992px) {
-  /* line 64, ../sass/features/_heroForm.scss */
+  /* line 71, ../sass/features/_heroForm.scss */
   .hero--title {
     font-size: 2.8vw;
   }
 }
 @media (min-width: 1199px) {
-  /* line 64, ../sass/features/_heroForm.scss */
+  /* line 71, ../sass/features/_heroForm.scss */
   .hero--title {
     font-size: 2.1vw;
   }
 }
 @media (min-width: 1670px) {
-  /* line 64, ../sass/features/_heroForm.scss */
+  /* line 71, ../sass/features/_heroForm.scss */
   .hero--title {
     font-size: 35px;
   }
 }
 
 @media (min-width: 768px) {
-  /* line 91, ../sass/features/_heroForm.scss */
+  /* line 98, ../sass/features/_heroForm.scss */
   .hero--form form {
     display: table;
     width: 100%;
   }
 }
 
+/* line 107, ../sass/features/_heroForm.scss */
+.hero--form--inner .searchclear {
+  position: absolute;
+  right: 16px;
+  top: 6px;
+  bottom: 0;
+  display: none;
+  font-size: 2.5em;
+  color: #ccc;
+  cursor: pointer;
+}
 @media (min-width: 768px) {
-  /* line 99, ../sass/features/_heroForm.scss */
+  /* line 106, ../sass/features/_heroForm.scss */
   .hero--form--inner {
     display: table-cell;
     vertical-align: top;
   }
 }
-/* line 106, ../sass/features/_heroForm.scss */
+/* line 123, ../sass/features/_heroForm.scss */
 .hero--form--inner .row, .hero--form--inner .interior-content {
   margin-right: -5px;
   margin-left: -5px;
 }
-/* line 111, ../sass/features/_heroForm.scss */
+/* line 128, ../sass/features/_heroForm.scss */
 .hero--form--inner .col-sm-6 {
   padding: 0 5px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  /* line 115, ../sass/features/_heroForm.scss */
+  /* line 132, ../sass/features/_heroForm.scss */
   .hero--form--inner .location {
     width: 40%;
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  /* line 120, ../sass/features/_heroForm.scss */
+  /* line 137, ../sass/features/_heroForm.scss */
   .hero--form--inner .specialty {
     width: 60%;
   }
 }
-/* line 126, ../sass/features/_heroForm.scss */
+/* line 143, ../sass/features/_heroForm.scss */
 .hero--form--inner input {
   box-shadow: inset 0 0 7px rgba(146, 146, 146, 0.35);
   font-family: "gothambook";
@@ -9831,19 +9850,25 @@ button.search:hover {
   background-color: #f1f1f1;
   border: none;
 }
+@media (min-width: 992px) {
+  /* line 143, ../sass/features/_heroForm.scss */
+  .hero--form--inner input {
+    font-size: 18px;
+  }
+}
 
-/* line 145, ../sass/features/_heroForm.scss */
+/* line 166, ../sass/features/_heroForm.scss */
 .hero--form--button {
   height: 50px;
 }
 @media (min-width: 768px) {
-  /* line 145, ../sass/features/_heroForm.scss */
+  /* line 166, ../sass/features/_heroForm.scss */
   .hero--form--button {
     width: 1%;
     display: table-cell;
   }
 }
-/* line 153, ../sass/features/_heroForm.scss */
+/* line 174, ../sass/features/_heroForm.scss */
 .hero--form--button button {
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
   font-family: "gothammedium", Helvetica, sans-serif;
@@ -9874,7 +9899,7 @@ button.search:hover {
   background-color: #e39e14;
 }
 @media (min-width: 768px) {
-  /* line 153, ../sass/features/_heroForm.scss */
+  /* line 174, ../sass/features/_heroForm.scss */
   .hero--form--button button {
     width: 136px;
     height: 50px;
