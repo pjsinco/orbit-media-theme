@@ -9,18 +9,6 @@
 
 .hero--image {
 
-    // height: 170px;
-    // background-size: cover;
-    // background-position: center;
-
-    // @media (min-width: $screen-sm-min) {
-    //     height: 420px;
-    // }
-
-    // @media (min-width: $screen-md-min) {
-    //     height: 760px;
-    // }
-
     img {
         width: 100%;
         height: auto;
@@ -30,11 +18,11 @@
 
 .hero--band {
     position: static;
-    padding: 20px 0 30px 0;
+    padding: 18px 0 30px 0;
     background: rgba(#b5790b, 0.9);
 
     @media (min-width: $screen-sm-min) {
-        padding: 22px 0 10px 0;
+        padding: 15px 0 10px 0;
     }
 
     // @media (min-width: $screen-md-min) {
@@ -52,26 +40,33 @@
 .hero--message {
     @include webFont();
     padding-bottom: 0;
+    margin-bottom: .5em;
     color: #fff;
-    font-size: 18px;
-    line-height: 28px;
-
-    @media (min-width: $screen-sm-min) {
-        padding-bottom: 30px;
-        font-size: 22px;
-        line-height: 36px;
-    }
+    font-size: 16px;
+    line-height: 23px;
 
     @media (min-width: $screen-md-min) {
-        font-size: 25px;
-    }
+        margin-bottom: 1em;
+        font-size: 21px;
+        line-height: 32px;
+    }   
+//    @media (min-width: $screen-sm-min) {
+//        padding-bottom: 30px;
+//        font-size: 22px;
+//        line-height: 36px;
+//    }
+
+    /*@media (min-width: $screen-md-min) {*/
+        /*font-size: 25px;*/
+    /*}*/
 }
 
 .hero--title {
     @include webFont('bold');
+    margin-bottom: .25em;
     padding-right: 0;
-    font-size: 33px;
-    line-height: 70px;
+    font-size: 23px;
+    line-height: 1.5;
     text-transform: uppercase;
     color: #fff;
 
@@ -132,21 +127,23 @@
         @include box-shadow(inset 0 0 7px rgba(146,146,146,.35));
         @include webFont();
         width: 100%;
-        height: 75px;
+        height: 50px;
         padding: 0 15px;
-        font-size: 21px;
+        font-size: 16px;
+        line-height: 1.4;
         background-color: #f1f1f1;
         border: none;
 
-        @media (max-width: $screen-sm-min) {
-            margin-bottom: 10px;
-            font-size: 18px;
-            height: 50px;
-        }
+//        @media (max-width: $screen-sm-min) {
+//            margin-bottom: 10px;
+//            font-size: 16px;
+//            height: 50px;
+//        }
     }
 }
 
 .hero--form--button {
+    height: 50px;
 
     @media (min-width: $screen-sm-min) {
         width: 1%;
@@ -157,14 +154,14 @@
         @include button('yellow');
         @include webFont();
         width: 100%;
-        height: 70px;
+        height: 50px;
         text-align: center;
         color: #fff;
-        font-size: 23px;
+        font-size: 20px;
 
         @media (min-width: $screen-sm-min) {
             width: 136px;
-            height: 75px;
+            height: 50px;
             margin-left: 10px;
         }
     }
