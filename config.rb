@@ -1,9 +1,8 @@
 http_path = '/'
-css_dir = '.'
+css_dir = 'css'
 fonts_dir = 'fonts'
 sass_dir = 'sass'
 javascripts_dir = 'js'
-output_style = :compressed
 images_dir = 'images'
 relative_assets = true
 line_comments = true

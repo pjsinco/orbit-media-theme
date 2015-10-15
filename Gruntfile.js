@@ -3,8 +3,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-contrib-compass");
   grunt.loadNpmTasks("grunt-autoprefixer");
+  grunt.loadNpmTasks("grunt-notify");
 
   grunt.initConfig({
+    notify: {
+        sass: {
+            options: {
+                title: 'Sass',
+                message: 'Sassed!'
+            } 
+        },
+    },
 
     autoprefixer: {
       css: {
@@ -15,30 +24,20 @@ module.exports = function(grunt) {
     compass: {
       dev: {
         options: {
-          config: 'config.rb'
+          config: 'config.rb',
+          specify: ['sass/default.scss', 'sass/layout.scss']
         }
       }
     },
 
 
     watch: {
-      options: {
-        livereload: true
-      },
-      
-      sass: {
-        files: ['sass/**/*.scss'],
-        tasks: ['compass:dev', 'autoprefixer:css'] 
-      },
+        sass: {
+            files: ['sass/**/*.scss'],
+            tasks: ['compass:dev', 'autoprefixer:css', 'notify:sass'] 
+        },
+    },
 
-      php: {
-        files: ['**/*.php'],
-        options: {
-          livereload: 35729
-        }
-      },
-    
-    } // watch
 
   }); // initConfig
   
