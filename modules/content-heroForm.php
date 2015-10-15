@@ -18,11 +18,11 @@
                         <form id="findYourDo" action="">
                             <div class="hero--form--inner">
                                 <div class="row">
-                                    <div class="col-sm-6 specialty">
-                                        <input id="specialty" name="q" type="text" placeholder="Name or Specialty">
-                                    </div>
                                     <div class="col-sm-6 location">
                                         <input id="location" name="location" type="text" placeholder="City, State or Zip">
+                                    </div>
+                                    <div class="col-sm-6 specialty">
+                                        <input id="specialty" name="q" type="text" placeholder="Name or Specialty">
                                     </div>
                                 </div>
                             </div> <!-- .hero--form--inner -->
