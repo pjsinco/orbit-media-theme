@@ -19,10 +19,12 @@
                             <div class="hero--form--inner">
                                 <div class="row">
                                     <div class="col-sm-6 location">
-                                        <input id="location" name="location" type="text" placeholder="City, State or Zip">
+                                        <input id="location" name="location" type="text" placeholder="City and State or Zip">
+                                        <i class="searchclear">&times;</i>
                                     </div>
                                     <div class="col-sm-6 specialty">
                                         <input id="specialty" name="q" type="text" placeholder="Name or Specialty">
+                                        <i class="searchclear">&times;</i>
                                     </div>
                                 </div>
                             </div> <!-- .hero--form--inner -->
