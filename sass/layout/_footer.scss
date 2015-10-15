@@ -1,0 +1,282 @@
+.cta,
+.copyright {
+    background: #cfcfcf;
+}
+
+.footer {
+    padding: 40px 0;
+    background: #dad9da;
+
+    h3 {
+        @include webFont('bold');
+        font-size: 18px;
+        line-height: 28px;
+        color: #2d2d2d;
+        letter-spacing: (25em/1000);
+    }
+
+    .logo {
+        padding-right: 30px;
+
+        @media (max-width: $screen-sm-min) {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .logo img {
+        width: 100%;
+        height: auto;
+
+        @media (max-width: $screen-sm-min) {
+            width: 120px;
+        }
+    }
+}
+
+.get-in-touch {
+
+    .address {
+        color: #767676;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    address {
+        margin-bottom: 0;
+    }
+}
+
+#footer-links {
+    @media (max-width: $screen-sm-min) {
+        margin: 20px 0;
+    }
+}
+
+.menu.quick {
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        margin: 0 0 3px 0;
+        padding: 0;
+    }
+
+    a {
+        @include appendSingleArrow;
+        color: #767676;
+        font-size: 16px;
+        line-height: 30px;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+
+.newsletter {
+    margin-top: 0;
+
+    @media (min-width: $screen-sm-max) {
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        margin-top: 40px;
+    }
+
+    p {
+        font-style: italic;
+        font-size: 16px;
+        line-height: 18px;
+        color: #767676;
+    }
+
+    .ninja-forms-form-wrap {
+        padding: 0;
+        background: none;
+    }
+
+    .ninja-forms-form-wrap {
+        padding: 0;
+        margin: 0;
+
+        h2 {
+            font-size: 24px;
+            line-height: 40px;
+            letter-spacing: (25em/1000);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .ninja-forms-response-msg {
+            margin-bottom: 10px;
+            font-size: 14px;
+
+            &.ninja-forms-error-msg p {
+                color: $pink;
+                font-style: normal;
+            }
+        }
+    }
+
+    #ninja_forms_form_15_all_fields_wrap {
+        @include box-shadow(inset 0 0 7px rgba(176,176,176,.25));
+        display: table;
+        padding: 3px;
+        border: 1px solid #d4d4d4;
+        background: #fff;
+
+        label {
+            position: absolute;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .text-wrap {
+            display: table-cell;
+            width: 100%;
+            vertical-align: top;
+
+            input {
+                @include box-shadow(none);
+                border: none;
+                background: transparent;
+                height: 43px;
+                font-size: 15px;
+                letter-spacing: (50em/1000);
+
+                @include placeholder {
+                    font-style: italic;
+                    color: #767676;
+                    opacity: 1;
+                }
+            }
+
+            .ninja-forms-field-error {
+                display: none !important;
+            }
+        }
+
+        .submit-wrap {
+            position: relative;
+            display: table-cell;
+            width: 34px;
+            vertical-align: top;
+
+            > div {
+                @include background-image(
+                    linear-gradient(top, #fcb425, #e39e14)
+                );
+                background-color: $yellow;
+                height: 43px;
+            }
+
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 29px;
+                display: inline-block;
+                content: '\00A0 \f105';
+                font-family: FontAwesome;
+                font-size: 21px;
+                color: #fff;
+                text-align: center;
+                line-height: 44px;
+            }
+        }
+
+        button {
+            position: relative;
+            z-index: 10;
+            background: transparent !important;
+            width: 34px;
+            height: 43px;
+            padding: 0;
+            margin: 0;
+            text-indent: 999em;
+            overflow: hidden;
+        }
+    }
+}
+
+.copyright {
+    padding: 8px 0 3px 0;
+    min-height: 40px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #595959;
+
+    @media (max-width: $screen-sm-min) {
+        padding-bottom: 16px;
+    }
+
+    span {
+        margin-right: 4px;
+        float: left;
+    }
+
+    .menu {
+        display: inline;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+
+            &:before {
+                display: inline-block;
+                content: "|";
+                margin: 0 4px 0 1px;
+            }
+
+            a {
+                color: #595959;
+
+                &:hover {
+                    color: $yellow;
+                }
+            }
+        }
+    }
+}
+
+.copyright--owner {
+    @media (max-width: $screen-sm-min) {
+        padding: 12px 15px 18px 15px;
+    }
+}
+
+.social-outlets {
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $screen-sm-min) {
+        float: right;
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+
+        + li {
+            margin-left: 8px;
+        }
+    }
+
+    a {
+        color: #595959;
+
+        &:hover {
+            color: $pink;
+        }
+    }
+}

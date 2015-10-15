@@ -1,0 +1,84 @@
+.outer-row.feeds {
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+.feed--title {
+    @include webFont('bold');
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: (25em/1000);
+
+    a {
+        color: #595959;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    &:after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        display: block;
+        width: 218px;
+        border-bottom: 1px solid $blue;
+    }
+}
+
+.feed {
+    .post {
+        margin: 0px -15px 15px -15px;
+        padding: 0;
+        border: none;
+    }
+}
+
+.post--title {
+    @include webFont('bold');
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+
+    a {
+        color: $yellow;
+
+        &:hover {
+            color: #5d5d5d;
+        }
+    }
+}
+
+.meta {
+    font-size: 16px;
+    color: #5d5d5d;
+
+    a {
+        color: #5d5d5d;
+
+        &:hover {
+            color: $yellow;
+        }
+    }
+}
+
+.faqs {
+
+    .feed--title {
+        margin-bottom: 30px;
+    }
+
+    .post--title {
+        @include webFont();
+        letter-spacing: 0;
+
+        a {
+            @include webFont('bold');
+        }
+    }
+}

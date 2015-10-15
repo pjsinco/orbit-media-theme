@@ -1,0 +1,20 @@
+ul.products {
+    @extend .row;
+    padding: 0;
+
+    .product {
+        @extend .col-sm-3;
+        list-style: none inside none;
+        position: relative;
+
+        &.first {
+            clear: both;
+        }
+
+        .onsale {
+            position: absolute;
+            top: 0;
+            left: 15px;
+        }
+    }
+}

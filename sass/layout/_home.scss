@@ -1,0 +1,29 @@
+#homeContent {
+    padding: 50px 0;
+    text-align: center;
+    font-family: "myriad-pro", "Myriad Pro", sans-serif;
+    color: #9e9e9e;
+    border-bottom: 1px solid #d9dcdd;
+    font-size: 16px;
+    line-height: (30/16);
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 24px;
+        line-height: 1.83333;
+    }
+}
+
+#featuredProducts {
+    padding: 50px 0;
+    border-bottom: 1px solid #d9dcdd;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .product {
+        @media (min-width: $screen-sm-min) {
+            margin-bottom: 0;
+        }
+    }
+}

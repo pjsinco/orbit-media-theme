@@ -1,0 +1,204 @@
+
+.ninja-forms-form-wrap {
+    // margin-left: -15px;
+    // margin-right: -15px;
+    padding: 25px 30px 35px;
+    background: #f7f7f7;
+
+    @media (min-width: $screen-md-min) {
+        padding: 25px 30px 35px;
+        // margin: 25px 12px 12px;
+        // max-width: 610px;
+    }
+
+    .ninja-forms-all-fields-wrap .ninja-forms-field-error {
+        background: transparent !important;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: left;
+    }
+
+    .ninja-forms-form-title {
+        @include webFont('bold');
+        margin-bottom: 5px;
+        font-size: 18px;
+        letter-spacing: (25em/1000);
+    }
+
+    .ninja-forms-required-items {
+        font-style: italic;
+        margin-bottom: 20px;
+        color: #979797;
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+    .ninja-forms-all-fields-wrap {
+
+        .field-wrap {
+            clear: both;
+            // max-width: 550px;
+            width: 100%;
+        }
+
+        // .ninja-forms-required-items {
+        //     margin-bottom: 10px;
+        // }
+
+        // .isOptional-wrap label:after {
+        //     content: " (optional)";
+        //     color: #909090;
+        //     font-weight: normal !important;
+        // }
+
+        label {
+            @include webFont();
+            margin: 0;
+            vertical-align: top;
+            font-weight: normal;
+            font-size: 15px;
+            line-height: 18px;
+            color: #595959;
+            background: none;
+            padding-bottom: 5px;
+
+            @media (min-width: $screen-md-min) {
+                // padding: 12px 15px;
+                // width: 30%;
+                // float: left;
+            }
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=phone] {
+            @include box-shadow(inset 0 0 7px rgba(146,146,146,.25));
+            margin: 0 !important;
+            width: 100%;
+            height: 50px;
+            border: 1px solid #d4d4d4;
+            padding: 0 10px !important;
+
+            @media (min-width: $screen-md-min) {
+                // width: 70%;
+                // background: url(../images/arrow.png) no-repeat left top white;
+                // border: none;
+            }
+
+            &::-webkit-input-placeholder,
+            &:-moz-placeholder,
+            &::-moz-placeholder,
+            &:-ms-input-placeholder {
+               font-style: italic;
+            }
+
+        }
+        select {
+            @include border-radius(0px);
+            float: left;
+            margin: 0 !important;
+            padding: 8px 10px;
+            margin: 0;
+            font-size: 16px;
+            color: #868686;
+            height: 42px !important;
+            padding: 0 10px;
+            margin: 0;
+            outline: none;
+            height: 42px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            width: 100%;
+            border: 1px solid #d4d4d4;
+
+            @media (min-width: $screen-md-min) {
+                font-size: 15px;
+                padding: 0 10px;
+                // width: 70% !important;
+                // border: 1px solid #eee;
+                // background: url(../images/arrow.png) no-repeat left top white;
+            }
+        }
+
+        .textarea-wrap {
+            textarea {
+                @include box-shadow(inset 0 0 7px rgba(176,176,176,.25));
+                height: 290px;
+                border: 1px solid #d4d4d4;
+                max-width: auto;
+                width: 100%;
+                margin: 0px !important;
+
+                @media (min-width: $screen-md-min) {
+                    // width: 70% !important;
+                    // background: url(../images/arrow.png) no-repeat left top white;
+                }
+            }
+        }
+
+        input[type=file] {
+            margin: 0px !important;
+            display: block;
+            float: left;
+            height: 42px;
+            width: 70%;
+            padding-top: 10px;
+            padding-left: 15px;
+            text-align: center;
+        }
+
+        input[type=submit] {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 1;
+            color: #FFF !important;
+            letter-spacing: 0.14px;
+            background: #c8543c;
+            border: 1px solid #b44b2f;
+            border-bottom: none;
+            padding: 13px 50px;
+            margin-top: 15px;
+            margin-bottom: 7px;
+            text-decoration: none;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .ninja-forms-field-error {
+            width: 100%;
+            display: block;
+            background: #ffd1d1;
+            max-width: 550px;
+            padding: 5px;
+            text-align: center;
+            clear: both;
+        }
+
+        .submit-wrap {
+            // text-align: right;
+            background: none;
+            border: none;
+        }
+
+        button {
+            @include button();
+            @include webFont();
+            width: 100%;
+            padding: 8px 20px;
+            color: #fff;
+            font-size: 21px;
+            text-transform: uppercase;
+
+            @media (min-width: $screen-sm-min) {
+                width: auto;
+                padding: 8px 60px;
+            }
+
+            &:after {
+                display: inline-block;
+                content: '\00A0 \f101';
+                font-family: FontAwesome;
+            }
+        }
+    }
+}

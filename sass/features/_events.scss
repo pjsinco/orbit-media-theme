@@ -1,0 +1,64 @@
+/* TRIBE EVENTS */
+
+.tribe-mini-calendar {
+    text-align: center;
+    width: 100%;
+
+    thead.tribe-mini-calendar-nav {
+        td {
+            background: #c8543c;
+            @include background(linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05)), #c8543c);
+            @include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.36));
+            border: 1px solid #b44b2f;
+            color: #fff;
+        }
+    }
+
+    .tribe-mini-calendar-day-link {
+        color: #c8543c;
+    }
+
+    .tribe-events-present {
+        background-color: #333 !important;
+    }
+}
+
+.tribe-mini-calendar-event {
+    .list-daynumber {
+        background: #333;
+    }
+
+    .list-date {
+        background: #333 !important;
+    }
+}
+
+#tribe-events {
+
+    // .tribe-events-back {
+    //     margin-bottom: 34px;
+    // }
+
+    /* SINGLE VENUE */
+    .tribe-events-venue {
+
+        .tribe-events-venue-meta {
+            padding: 0;
+        }
+
+        .tribe-events-map-wrap {
+            margin: 0 0 20px 0;
+            padding: 0;
+            width: 100%;
+            float: none;
+        }
+    }
+
+    /* SIDEBAR CALENDAR */
+    .tribe_mini_calendar_widget {
+        h3 {
+            margin-top: 5px;
+        }
+    }
+
+}

@@ -1,0 +1,95 @@
+@mixin webFont( $weight: 'regular' ) {
+    @if $weight == 'bold' {
+        font-family: $gothamBold, Helvetica, sans-serif;
+        font-weight: 500;
+    }
+    @if $weight == 'regular' {
+        font-family: $gotham;
+        font-weight: 400;
+    }
+}
+
+@mixin appendSingleArrow() {
+    &:after {
+        content: '\00A0 \203A';
+        // font-family: FontAwesome;
+    }
+}
+
+@mixin appendDoubleArrow() {
+    &:after {
+        content: '\00A0\f101';
+        font-family: FontAwesome;
+    }
+}
+
+@mixin button( $color: 'pink' ) {
+
+    @include box-shadow(0 3px 7px rgba(0,0,0,.15));
+    @include webFont('bold');
+    padding: 8px 15px;
+    color: #fff;
+    font-size: 21px;
+    text-transform: uppercase;
+    text-align: center;
+    border: none;
+
+    @if $color == 'yellow' {
+
+        @include background-image(
+            linear-gradient(top, #fcb425, #e39e14)
+        );
+        background-color: $yellow;
+
+        &:hover {
+            @include background-image(none);
+            background-color: #e39e14;
+        }
+
+    } @else {
+
+        @include background-image(
+            linear-gradient(top, #eb68de, #d45dcc)
+        );
+        background-color: $pink;
+        color: #fff;
+
+        &:hover {
+            @include background-image(none);
+            background-color: #d45dcc;
+        }
+    }
+}
+
+// Linear Gradient Fix
+@mixin gradient( $color: 'pink' ) {
+    @if $color == 'yellow' {
+
+        @include background-image(
+            linear-gradient(top, #fcb425, #e39e14)
+        );
+        background-color: $yellow;
+
+    } @else {
+
+        @include background-image(
+            linear-gradient(top, #eb68de, #d45dcc)
+        );
+        background-color: $pink;
+        // color: #fff;
+
+        // &:hover {
+        //     @include background-image(
+        //         linear-gradient(bottom, #eb68de, #d45dcc)
+        //     );
+        // }
+    }
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}
+}
+

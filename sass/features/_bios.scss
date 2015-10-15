@@ -1,0 +1,45 @@
+.bio {
+    @extend .col-sm-4;
+    margin-top: 40px;
+    text-align: center;
+
+    .glyph {
+        @include border-radius(50%);
+        @include box-shadow(0 0 0 8px #f3f4f5, 0 0 5px 8px rgba(0, 0, 0, 0.2));
+    }
+
+    .desc {
+        padding: 20px 0 10px;
+
+        .name {
+            font-family: "myriad-pro-condensed", "Myriad Pro", Trebuchet MS, Arial, Sans-Serif, sans-serif;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 1.18182;
+        }
+
+        .title {
+            font-size: 13px;
+            font-style: italic;
+            font-weight: normal;
+            color: #585352;
+        }
+    }
+}
+
+#bioSidebar {
+    text-align: center;
+
+    .bioSocialMedia {
+        margin-top: 30px;
+        text-align: center;
+
+        a {
+            display: block;
+
+            .fa {
+                padding-right: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+
+    /**
+     * @file tinymce.css
+     *
+     * The CSS file that will be loaded by TinyMCE in the WordPress interface.
+     *
+     * @todo Convert this file into SASS. (Andi?) :)
+     * @author Jimmy K. <jimmy@orbitmedia.com>
+     */
+
+    body {
+        background: #fafafa;
+        color: #444;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        padding: 10px;
+    }
+
+    p {
+        margin: 0 0 20px;
+    }

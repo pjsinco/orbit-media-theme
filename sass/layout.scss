@@ -1,0 +1,54 @@
+/* Mixins, Defaults */
+@import "bootstrap/bootstrap";
+@import "compass/css3";
+@import "vars";
+@import "mixins";
+@import "typography";
+
+%shadow {
+    @include box-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+%shadowBorder {
+    @include box-shadow(0 0 0 8px #f3f4f5, 0 0 5px 8px rgba(0, 0, 0, 0.2));
+}
+
+$headingFont: "myriad-pro", "Myriad Pro", sans-serif;
+$headingCondensedFont: "myriad-pro-condensed", "Myriad Pro", Trebuchet MS, Arial, Sans-Serif, sans-serif;
+
+
+.glyph {
+    @include border-radius(50%);
+    @include box-shadow(0 0 0 8px #f3f4f5, 0 0 5px 8px rgba(0, 0, 0, 0.2));
+    margin: 10px auto;
+}
+
+.container-fluid {
+    @media (min-width: $screen-md-min) {
+        max-width: 1170px;
+    }
+
+    img {
+        @extend .img-responsive;
+    }
+}
+
+/* Layout */
+@import "layout/header";
+@import "layout/home";
+@import "layout/left";
+@import "layout/interior";
+@import "layout/sidebar";
+@import "layout/footer";
+
+/* Features */
+@import "features/hero";
+@import "features/heroForm";
+@import "features/blog";
+@import "features/bios";
+@import "features/carousel";
+@import "features/feeds";
+@import "features/forms";
+@import "features/pageBlocks";
+@import "features/faqs";
+@import "features/solarbox";
+@import "features/footerCTA";

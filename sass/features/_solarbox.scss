@@ -1,0 +1,208 @@
+#solarBoxContainer {
+    width:100%;
+    visibility:hidden;
+    background:rgba(0,0,0,0.9);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:12622;
+
+    #solarBoxOuter {
+        position:absolute;
+        width:auto;
+        height:auto;
+        display:inline-block;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        margin:auto;
+
+        #solarBoxTop {
+            text-align:right;
+        }
+        #solarBoxInner {
+            clear:both;
+            background:#000;
+            color:#fff;
+            padding:40px;
+
+            #solarBoxLoading {
+                background:url(../assets/images/layout/loading.gif)center no-repeat;
+
+                #solarBoxContent {
+                    text-align:left;
+                    width:0;
+                    height:0;
+
+                    img {
+                        width:100%;
+                        height:auto;
+                    }
+                }
+            }
+
+            #solarBoxBottom {
+                text-align:left;
+                max-height:100px;
+                overflow:auto;
+                margin:12px 0 0 0;
+
+                .solarBoxClose {
+                    float:right;
+                    display:none;
+                    margin:0 0 12px 12px;
+                }
+                #solarBoxTitle {
+                    color:#fff;
+                }
+            }
+        }
+    }
+
+    .solarBoxClose {
+        display:inline-block;
+        background-position:-72px 0;
+        padding:0 0 6px 0;
+    }
+    .solarBoxClose:before {
+        content:"\f00d";
+    }
+    #solarBoxPrev,
+    #solarBoxNext,
+    .solarBoxClose {
+        text-decoration:none !important;
+        display:inline-block;
+        font-family:FontAwesome !important;
+        color:#fff !important;
+        font-size:24px;
+        outline: 0;
+    }
+    #solarBoxPrev:hover,
+    #solarBoxNext:hover,
+    .solarBoxClose:hover {
+        text-decoration:none;
+        opacity:0.6;
+    }
+    #solarBoxPrev,
+    #solarBoxNext {
+        font-size:64px;
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+    }
+    #solarBoxPrev {
+        background-position:0 0;
+        left:12px;
+        z-index:12624;
+    }
+    #solarBoxPrev:before {
+        content:"\f104";
+    }
+    #solarBoxNext {
+        right:12px;
+        z-index:12625;
+    }
+    #solarBoxNext:before {
+        content:"\f105";
+    }
+}
+//Animation Speed
+#solarBoxOuter {
+    transition:.5s;
+    text-align:center;
+    overflow:hidden;
+}
+#solarBoxImage {
+    opacity:0;
+    transition:all 0.5s ease .5s
+}
+
+//AddThis
+#solarSocial {
+    display:none;
+    height:20px;
+    margin:10px 0 0 0;
+}
+.useAddThis #solarSocial {
+    display:block;
+}
+
+//Mobile and Fullscreen
+.viewFull {
+
+    #solarBoxOuter {
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        transform:none;
+
+        #solarBoxTop {
+            .solarBoxClose {
+                position:fixed;
+                top:12px;
+                right:12px;
+                padding:0 0 20px 20px;
+                z-index:12626;
+            }
+        }
+        #solarBoxInner {
+            overflow:visible;
+            background:none;
+            padding:0;
+
+            #solarBoxLoading {
+                position:absolute;
+                width:100%;
+                height:100%;
+                top:0;
+                left:0;
+
+                #solarBoxContent {
+                    position:absolute;
+                    transition:none;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
+                    margin:auto;
+                }
+            }
+        }
+    }
+    #solarBoxBottom {
+        display:none;
+    }
+    &.imageMedia #solarBoxBottom {
+        display:block;
+        background:rgba(0,0,0,0.5);
+        width:100%;
+        position:fixed;
+        bottom:0;
+        left:0;
+        padding:10px !important;
+        z-index:12623;
+    }
+}
+
+//Close Button On Bottom
+.closeInBottom.viewBox {
+    #solarBoxBottom .solarBoxClose {
+        display:block;
+    }
+    #solarBoxTop .solarBoxClose {
+        display:none;
+    }
+}
+
+//Inline
+.inlineMedia {
+    #solarBoxLoading {
+        background:none;
+    }
+    #solarBoxContent {
+        background:#000;
+    }
+}
+

@@ -1,0 +1,61 @@
+.cta {
+
+    .cell {
+        padding: 12px 15px;
+    }
+
+    .cta--message {
+        @include webFont();
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: (25em/1000);
+        color: #595959;
+        text-align: center;
+
+        @media (max-width: $screen-sm-min) {
+            padding-top: 22px;
+            padding-bottom: 5px;
+        }
+    }
+
+
+    .button {
+        @include webFont();
+        display: inline-block;
+        width: 100%;
+        padding: 10px 18px;
+        min-width: 260px;
+        font-size: 14px;
+    }
+
+    @media (min-width: $screen-sm-min) {
+
+        .table {
+            display: table;
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .cell {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .cta--message {
+            font-size: 24px;
+            text-align: left;
+        }
+
+        .cta--button {
+            text-align: right;
+        }
+
+        .button {
+            width: auto;
+            padding: 15px 18px;
+            font-size: 21px;
+        }
+
+    }
+}

@@ -1,0 +1,336 @@
+.back-link {
+    @include webFont();
+    font-size: 18px;
+}
+
+.post {
+    position: relative;
+    padding-top: 30px;
+    text-align: left;
+
+    @media (min-width: $screen-sm-min) {
+        padding-top: 40px;
+    }
+
+    @media (min-width: $screen-md-min) {
+        padding-top: 60px;
+    }
+
+    .divider {
+        margin: 0 15px;
+        padding-top: 30px;
+        border-bottom: 1px solid $blue;
+        clear: both;
+
+        @media (min-width: $screen-sm-min) {
+            padding-top: 40px;
+        }
+
+        @media (min-width: $screen-md-min) {
+            padding-top: 60px;
+        }
+    }
+}
+
+.post--image {
+    margin-bottom: 10px;
+
+    @media (min-width: $screen-md-min) {
+        margin-bottom: 0;
+    }
+}
+
+.post--content {
+    @media (min-width: $screen-sm-min) {
+        padding-top: 10px;
+    }
+}
+
+.post.landing {
+    @include clearfix();
+
+    .post--title {
+        margin-bottom: 10px;
+        font-size: 31px;
+        line-height: 41px;
+
+        a {
+            @include appendSingleArrow();
+            color: #474747;
+
+            &:hover {
+                color: $yellow;
+            }
+        }
+    }
+
+    .post--meta {
+        margin-bottom: 15px;
+
+        .meta {
+            font-style: italic;
+            font-size: 14px;
+            color: #969696;
+            letter-spacing: (25em/1000);
+
+            a {
+                color: #969696;
+            }
+        }
+        .delimiter {
+            margin: 0 7px;
+            color: #969696;
+        }
+    }
+
+    .post--excerpt {
+        @include webFont();
+        font-size: 16px;
+        color: #5d5d5d;
+        letter-spacing: (25em/1000);
+        line-height: 30px;
+    }
+
+}
+
+.post.detail {
+    padding: 0;
+
+    h1 {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $blue;
+    }
+}
+
+.postsNavWrapper {
+    margin-top: 55px;
+    margin-bottom: 40px;
+
+    margin-left: -15px;
+    margin-right: -15px;
+
+    @media (min-width: $screen-sm-min) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .wp-paginate {
+        @include webFont();
+        font-size: 18px;
+
+        a,
+        span {
+            padding: 4px 8px;
+            border: none;
+            background: none;
+            color: #979797;
+
+            @media (min-width: $screen-sm-min) {
+                padding: 4px 13px;
+            }
+
+            &:hover {
+                background: none;
+                border: none;
+                color: $yellow;
+            }
+        }
+
+        a.prev {
+            margin-right: 10px;
+
+            @media (min-width: $screen-sm-min) {
+                margin-right: 20px;
+            }
+
+            &:after {
+                display: inline-block;
+                content: '|';
+                padding-left: 20px;
+            }
+        }
+
+        a.next {
+            margin-left: 10px;
+
+            @media (min-width: $screen-sm-min) {
+                margin-left: 20px;
+            }
+
+            &:before {
+                display: inline-block;
+                content: '|';
+                padding-right: 20px;
+            }
+        }
+
+        span.current {
+            @include webFont();
+            color: $yellow;
+            background: none;
+            border: none;
+        }
+    }
+}
+
+// END POST META
+.wordpress-external-content {
+    padding: 18px;
+
+    h3 {
+        margin-bottom: 15px;
+        padding: 0;
+
+        a {
+            font-family: 600;
+            font-size: 28px;
+            line-height: (35 / 28);
+            color: #c7543b;
+            text-decoration: none;
+            font-weight: normal;
+
+            .icon-right-small {
+                @include rotate(320deg);
+                display: inline-block;
+                font-weight: normal;
+                margin: 0 0 0 -2px;
+                position: relative;
+                top: -1px;
+                width: auto;
+                font-size: 18px;
+            }
+
+            &:hover {
+                color: #96220b;
+            }
+        }
+    }
+
+    .author_image {
+        position: absolute;
+        right: 18px;
+        bottom: -20px;
+
+        img {
+            @include border-radius(50%);
+            width: 65px;
+            height: 65px;
+        }
+    }
+}
+
+// ADDTHIS ICONS
+.shareWrapper {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+    padding: 10px 0;
+
+    .shareTitle {
+        margin-right: 10px;
+        float: left;
+        display: inline-block;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: (25em/1000);
+    }
+
+    .addthis_sharing_toolbox {
+        top: 7px;
+        position: relative;
+
+        * {
+            margin: 0 !important;
+            vertical-align: top;
+        }
+    }
+}
+// END ADD THIS
+
+
+#commentsLabel {
+    margin-bottom: 35px;
+    font-size: 18px;
+    letter-spacing: (25em/1000);
+    text-transform: none;
+    color: #595959;
+}
+
+.commentlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .comment {
+        @extend .clearfix;
+        position: relative;
+        min-height: 64px;
+        padding-left: 92px;
+        margin-bottom: 30px;
+    }
+
+    .gravatar {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        top: 0;
+        left: 0;
+    }
+
+    .meta {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 24px;
+        color: #5d5d5d;
+
+        @media (min-width: $screen-sm-min) {
+            float: left;
+            margin-bottom: 0;
+            width: 33.3333%;
+        }
+
+        cite,
+        time {
+            display: block;
+
+            a {
+                color: $yellow;
+            }
+        }
+
+        time {
+            font-style: italic;
+        }
+    }
+
+    .comment-body {
+        font-size: 14px;
+        line-height: 26px;
+        color: #5c5c5c;
+
+        @media (min-width: $screen-sm-min) {
+            float: left;
+            width: 66.6666%;
+        }
+    }
+}
+
+#respond {
+    background: #f7f7f7;
+    padding: 20px 30px;
+}
+
+#reply-title {
+    font-size: 18px;
+    letter-spacing: (25em/1000);
+    text-transform: none;
+    color: #595959;
+}

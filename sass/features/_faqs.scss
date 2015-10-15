@@ -1,0 +1,26 @@
+.mainContent.faqs {
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .post {
+        padding: 30px 0;
+        border-bottom: 1px solid $blue;
+    }
+}
+
+.mainContent.faq {
+
+    h1 {
+        @extend .h2;
+        padding-bottom: 0;
+        text-transform: none;
+        border-bottom: none;
+    }
+
+    hr {
+        margin: 50px 0;
+        border-top: 1px solid $blue;
+    }
+}

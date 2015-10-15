@@ -1,0 +1,41 @@
+// SITE COLOR VALUES
+$backgroundColor: #ffffff;
+$bodyTextColor: #5d5d5d;
+
+$blue: #01eaff;
+$pink: #d45dcc;
+$yellow: #ffaa00;
+
+// Orbit Orange (Link)
+$primaryLinkColor: #39a5b3;
+$secondaryLinkColor: #c7543b;
+
+//Light Blue
+$goldLinkColor: #f9d35d;
+$blockquote: #c44e38;
+
+
+$condensed: "myriad-pro-condensed", "Myriad Pro", Trebuchet MS, Arial, Sans-Serif, sans-serif;
+$headingFont: "myriad-pro", "Myriad Pro", sans-serif;
+$bodyFont: 'Trebuchet MS', Tahoma, Verdana, sans-serif;
+$semibold: 600;
+
+
+span[class^="fa-"], span[class*=" fa-"], .postsNav span {
+    font-family: FontAwesome;
+}
+
+%shadow {
+    @include box-shadow(0 0 5px rgba(0, 0, 0, 0.2));
+}
+
+%shadowBorder {
+    @include box-shadow(0 0 0 8px #f3f4f5, 0 0 5px 8px rgba(0, 0, 0, 0.2));
+}
+
+.glyph {
+    @include border-radius(50%);
+    @include box-shadow(0 0 0 8px #f3f4f5, 0 0 5px 8px rgba(0, 0, 0, 0.2));
+    margin: 10px auto;
+}
+

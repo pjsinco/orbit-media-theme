@@ -1,0 +1,72 @@
+.interior-hero {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.interior-content {
+
+    @extend .row;
+    height: auto;
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    &.hasNoLeftOrRightCols {
+
+       #right {
+            @extend .col-xs-12;
+       }
+
+       #content {
+            @extend .col-xs-12;
+       }
+
+    }
+
+    &.hasLeftCol {
+
+        #right {
+            @extend .col-xs-12;
+            @extend .col-md-10;
+        }
+
+        #content {
+            @extend .col-xs-12;
+        }
+
+    }
+
+    &.hasRightCol {
+
+        #right {
+            @extend .col-xs-12;
+        }
+
+        #content {
+            @extend .col-sm-8;
+        }
+
+        #sidebar {
+            @extend .col-sm-4;
+        }
+
+    }
+
+    &.hasLeftAndRightCols {
+
+        #right {
+            @extend .col-xs-12;
+            @extend .col-md-10;
+        }
+
+        #content {
+            @extend .col-sm-8;
+        }
+
+        #sidebar {
+            @extend .col-sm-4;
+        }
+
+    }
+}
