@@ -279,6 +279,8 @@ function orbit_enqueue_scripts()
 
 add_action( 'wp_enqueue_scripts', 'orbit_enqueue_scripts' );
 
+
+
 /**
  *  Trim excerpts by word count instead of letter count.
  *  @see add_filter()
@@ -1150,3 +1152,44 @@ function mytheme_comment( $comment, $args, $depth )
             break;
     endswitch;
 }
+
+function elit_enqueue_scripts()
+{
+  wp_register_script( 'fitvids', 
+    get_template_directory_uri() . '/js/jquery.fitvids.js', 
+    array( 'jquery' ), false, true
+  );
+}
+add_action('wp_enqueue_scripts' , 'elit_enqueue_scripts');
+
+/**
+ * Add our fitvids loader
+ *
+ * http://fitvidsjs.com/
+ */
+function elit_add_fitvids_script() {
+  $output = '<script>' . PHP_EOL;
+  $output .= 'jQuery(document).ready(function() {' . PHP_EOL;
+  $output .= "  jQuery('.elit-video').fitVids();" . PHP_EOL;
+  $output .= "});";
+  $output .= '</script>' . PHP_EOL;
+
+  echo $output;
+}
+
+function elit_story_video_shortcode($atts, $content = null ) {
+  // we're going to need fitvids
+  wp_enqueue_script('fitvids');
+  add_action( 'wp_footer' , 'elit_add_fitvids_script', 50 );
+
+  $a = shortcode_atts(
+    array(
+      'embed' => '',
+    ), $atts
+  );
+  $markup  = "<figure class='image image--secondary elit-video' id='video'>";
+  $markup .= $a['embed'];
+  $markup .= '</figure>';
+  return $markup;
+}
+add_shortcode('story-video', 'elit_story_video_shortcode' );

@@ -11385,3 +11385,8 @@ button.search:hover {
     font-size: 21px;
   }
 }
+
+/* line 1, ../sass/features/_elit_video.scss */
+.elit-video {
+  margin: 0 0 20px;
+}
