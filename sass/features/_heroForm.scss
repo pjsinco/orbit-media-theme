@@ -1,3 +1,13 @@
+%button {
+    @include button('yellow');
+    @include webFont();
+    width: 100%;
+    height: 51.5px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+
 .outer-row .hero {
     position: relative;
     margin-bottom: 30px;
@@ -175,19 +185,21 @@
         /*display: table-cell;*/
     }
 
+    
     button {
-        @include button('yellow');
-        @include webFont();
-        width: 100%;
-        height: 51.5px;
-        text-align: center;
-        color: #fff;
-        font-size: 20px;
+      @extend %button;
 
-        @media (min-width: $screen-sm-min) {
-            /*width: 136px;*/
-            height: 51.5px;
-            margin-left: 10px;
-        }
+      @media (min-width: $screen-sm-min) {
+          /*width: 136px;*/
+          height: 51.5px;
+          margin-left: 10px;
+      }
+    }
+
+    &--inside {
+      button {
+        @extend %button;
+        margin-left: 0;
+      }
     }
 }
