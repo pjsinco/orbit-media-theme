@@ -1228,8 +1228,8 @@ function elit_highlight_search($text) {
       implode('|', $keys) . 
       '\b)(?!(([^<>]*?)>)|([^>]*?</a>))\'iu';
     $text = preg_replace($re, '<span class="highlight">\0</span>', strip_tags($text));
-    return $text;
   }
+  return $text;
 }
 add_filter('the_title', 'elit_highlight_search');
 add_filter('the_excerpt', 'elit_highlight_search');
