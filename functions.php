@@ -1201,7 +1201,15 @@ add_shortcode('story-video', 'elit_story_video_shortcode' );
  */
 function highlighted_search_excerpt() {
   $excerpt = strip_tags(get_the_excerpt());
-  $search_query = explode(' ', str_replace(array("&quot;", '"'), "", get_search_query()));
-  $re = '/(' . implode('|', $search_query) . ')/i';
+  $search_query = get_search_query();
+  
+  // if search term is in quotes, keep it together
+  if (preg_match('/"|&quot;/', $search_query) === 1) {
+    $search_pattern = str_replace(array("&quot;", '"'), "", $search_query);
+    $re = "/($search_pattern)/i";
+  } else {
+    $search_pattern = str_replace(array("&quot;", '"'), "", $search_query);
+    $re = '/(' . implode('|', explode(' ', $search_pattern)) . ')/i';
+  }
   return preg_replace($re, '<span class="highlight">$1</span>', $excerpt);
 }
