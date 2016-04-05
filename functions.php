@@ -653,7 +653,7 @@ function createPageBlocks() {
         'menu_position'       => 20,
         'can_export'          => true,
         'has_archive'         => true,
-        'exclude_from_search' => false,
+        'exclude_from_search' => true,
         'publicly_queryable'  => true,
         'capability_type'     => 'page',
     );
