@@ -37,9 +37,9 @@
                                         <h2 class="post--title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
                                         <div class="post--excerpt">
-                                            <?php //the_excerpt(); ?>
-                                            <?php //$excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?>
-                                            <?php echo highlighted_search_excerpt(); ?>
+                                            <?php the_excerpt(); ?>
+                                            <?php //echo get_the_excerpt(); ?>
+                                            <?php //echo elit_highlighted_search_excerpt(); ?>
                                         </div> <!--  .post--excerpt -->
                                     </div> <!--  .post--content -->
 

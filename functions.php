@@ -1199,7 +1199,7 @@ add_shortcode('story-video', 'elit_story_video_shortcode' );
  *     how-to-highlight-search-terms-without-plugin
  *
  */
-function highlighted_search_excerpt() {
+function elit_highlighted_search_excerpt() {
   $excerpt = strip_tags(get_the_excerpt());
   $search_query = get_search_query();
   
@@ -1213,3 +1213,23 @@ function highlighted_search_excerpt() {
   }
   return preg_replace($re, '<span class="highlight">$1</span>', $excerpt);
 }
+
+/**
+ * Source: http://wordpress.stackexchange.com/questions/16070/
+ *     how-to-highlight-search-terms-without-plugin
+ *
+ */
+function elit_highlight_search($text) {
+  if (is_search() && !is_admin()) {
+    $search_terms = get_query_var('s');
+    $keys = explode(" ", $search_terms);
+    $keys = array_filter($keys);
+    $re = '\'(?!((<.*?)|(<a.*?)))(\b' . 
+      implode('|', $keys) . 
+      '\b)(?!(([^<>]*?)>)|([^>]*?</a>))\'iu';
+    $text = preg_replace($re, '<span class="highlight">\0</span>', strip_tags($text));
+    return $text;
+  }
+}
+add_filter('the_title', 'elit_highlight_search');
+add_filter('the_excerpt', 'elit_highlight_search');
