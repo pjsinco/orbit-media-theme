@@ -1224,10 +1224,12 @@ function elit_highlight_search($text) {
     $search_terms = get_query_var('s');
     $keys = explode(" ", $search_terms);
     $keys = array_filter($keys);
-    $re = '\'(?!((<.*?)|(<a.*?)))(\b' . 
+    $re = '\'(?!((<.*?)|(<a.*?)))(' . 
       implode('|', $keys) . 
-      '\b)(?!(([^<>]*?)>)|([^>]*?</a>))\'iu';
+      ')(?!(([^<>]*?)>)|([^>]*?</a>))\'iu';
+
     $text = preg_replace($re, '<span class="highlight">\0</span>', strip_tags($text));
+
   }
   return $text;
 }
