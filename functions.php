@@ -1220,7 +1220,7 @@ function elit_highlighted_search_excerpt() {
  *
  */
 function elit_highlight_search($text) {
-  if (is_search() && !is_admin()) {
+  if (in_the_loop() && is_search() && !is_admin()) {
     $search_terms = get_query_var('s');
 
     if (preg_match('/"|&quot;/', $search_terms) === 1) {
