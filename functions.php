@@ -1193,3 +1193,15 @@ function elit_story_video_shortcode($atts, $content = null ) {
   return $markup;
 }
 add_shortcode('story-video', 'elit_story_video_shortcode' );
+
+/**
+ * Source: http://wordpress.stackexchange.com/questions/16070/
+ *     how-to-highlight-search-terms-without-plugin
+ *
+ */
+function highlighted_search_excerpt() {
+  $excerpt = strip_tags(get_the_excerpt());
+  $search_query = explode(' ', str_replace(array("&quot;", '"'), "", get_search_query()));
+  $re = '/(' . implode('|', $search_query) . ')/i';
+  return preg_replace($re, '<span class="highlight">$1</span>', $excerpt);
+}

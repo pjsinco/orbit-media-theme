@@ -11494,3 +11494,9 @@ button.search:hover {
 .elit-video {
   margin: 0 0 20px;
 }
+
+/* line 1, ../sass/features/_elit_search.scss */
+.highlight {
+  color: #ffaa00;
+  font-weight: 600;
+}

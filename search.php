@@ -38,7 +38,8 @@
 
                                         <div class="post--excerpt">
                                             <?php //the_excerpt(); ?>
-                                            <?php $excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?>
+                                            <?php //$excerpt = strip_tags(get_the_excerpt()); echo $excerpt; ?>
+                                            <?php echo highlighted_search_excerpt(); ?>
                                         </div> <!--  .post--excerpt -->
                                     </div> <!--  .post--content -->
 
