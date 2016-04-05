@@ -1222,11 +1222,20 @@ function elit_highlighted_search_excerpt() {
 function elit_highlight_search($text) {
   if (is_search() && !is_admin()) {
     $search_terms = get_query_var('s');
-    $keys = explode(" ", $search_terms);
-    $keys = array_filter($keys);
-    $re = '\'(?!((<.*?)|(<a.*?)))(' . 
-      implode('|', $keys) . 
-      ')(?!(([^<>]*?)>)|([^>]*?</a>))\'iu';
+
+    if (preg_match('/"|&quot;/', $search_terms) === 1) {
+      $search_pattern = str_replace(array("&quot;", '"'), "", $search_terms);
+      $re = '\'(?!((<.*?)|(<a.*?)))(' . 
+        $search_pattern .  
+        ')(?!(([^<>]*?)>)|([^>]*?</a>))\'iu';
+    } else {
+      $keys = explode(" ", $search_terms);
+      $keys = array_filter($keys);
+
+      $re = '\'(?!((<.*?)|(<a.*?)))(' . 
+        implode('|', $keys) . 
+        ')(?!(([^<>]*?)>)|([^>]*?</a>))\'iu';
+    }
 
     $text = preg_replace($re, '<span class="highlight">\0</span>', strip_tags($text));
 
