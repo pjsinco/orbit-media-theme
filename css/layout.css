@@ -11498,5 +11498,8 @@ button.search:hover {
 /* line 1, ../sass/features/_elit_search.scss */
 .highlight {
   color: #ffaa00;
+}
+/* line 4, ../sass/features/_elit_search.scss */
+.post--excerpt .highlight {
   font-weight: 600;
 }

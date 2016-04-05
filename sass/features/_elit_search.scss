@@ -1,4 +1,7 @@
 .highlight {
   color: $yellow;
-  font-weight: $semibold;
+
+  .post--excerpt & {
+    font-weight: $semibold;
+  }
 }
