@@ -11387,7 +11387,7 @@ button.search:hover {
 }
 
 /* line 1, ../sass/features/_elit_dropcap.scss */
-.single .post p:first-of-type:first-letter {
+.single .post > p:first-of-type:first-letter {
   height: .7em;
   margin: .13em 0 -.05em 0;
   padding: 0 .1em 0 0;
