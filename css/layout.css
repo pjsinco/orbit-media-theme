@@ -11396,3 +11396,79 @@ button.search:hover {
   float: left;
   color: #ffaa00;
 }
+
+/* line 1, ../sass/features/_elit_related.scss */
+.related {
+  font-family: "gothambook", "Trebuchet MS", Tahoma, Verdana, sans-serif;
+}
+/* line 4, ../sass/features/_elit_related.scss */
+.related__title {
+  height: 2.333333333em;
+  margin-bottom: 1em;
+  font-family: "Gotham";
+  font-weight: 200;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+  position: relative;
+  top: -3px;
+  line-height: 16px;
+  font-weight: 400;
+  background-image: -webkit-linear-gradient(left, #d45dcc, #d45dcc 33%, #ffaa00 33%, #ffaa00 67%, #01eaff 67%);
+  background-image: linear-gradient(to right, #d45dcc, #d45dcc 33%, #ffaa00 33%, #ffaa00 67%, #01eaff 67%);
+  background-size: 100% 2px;
+  background-position: 100% 95%;
+  background-repeat: no-repeat;
+}
+/* line 23, ../sass/features/_elit_related.scss */
+.related__img {
+  max-width: 50% !important;
+  float: left;
+  margin-right: 1em;
+}
+/* line 29, ../sass/features/_elit_related.scss */
+.related__body {
+  /*margin-left: 50%;*/
+}
+/* line 33, ../sass/features/_elit_related.scss */
+.related__head {
+  font-size: 18px;
+  line-height: 1.2;
+  /*@media screen and (min-width: $screen-sm-min) {*/
+  /*font-size: 16px;*/
+  /*}*/
+}
+@media screen and (min-width: 380px) {
+  /* line 33, ../sass/features/_elit_related.scss */
+  .related__head {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 600px) {
+  /* line 33, ../sass/features/_elit_related.scss */
+  .related__head {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 992px) {
+  /* line 33, ../sass/features/_elit_related.scss */
+  .related__head {
+    font-size: 21px;
+  }
+}
+
+/* line 3, ../sass/features/_elit_story.scss */
+.story__box {
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 600px) {
+  /* line 3, ../sass/features/_elit_story.scss */
+  .story__box {
+    width: 50%;
+    margin-left: 1.5em;
+    margin-bottom: 0;
+    float: right;
+  }
+}

@@ -1194,6 +1194,56 @@ function elit_story_video_shortcode($atts, $content = null ) {
 }
 add_shortcode('story-video', 'elit_story_video_shortcode' );
 
+function elit_related_shortcode($atts, $content = null) {
+  $a = shortcode_atts(
+    array(
+      'id' => '',
+    ), $atts
+  );
+
+  $post = get_post( $a['id'] );
+
+  // make sure the related post is published
+  if ( !$post || $post->post_status != 'publish') {
+    return $post; 
+  }
+
+  // build up our string to output
+  $output  = '<div class="story__box">';
+  $output .= '<div class="related">';
+  $output .= '<div class="related__title">Related</div>';
+
+  $thumb_id = null;
+
+  if ( has_post_thumbnail( $post->ID ) ) {
+    $thumb_id = get_post_thumbnail_id( $post->ID );
+  } else {
+    $meta = get_post_meta( $post->ID );
+    $thumb_id = $meta['elit_thumb'][0];
+  }
+  
+  $thumb = get_post( $thumb_id );
+
+  if ( $thumb_id )  {
+    $thumb_url = wp_get_attachment_thumb_url( $thumb_id );
+    $output .= '<img class="related__img" src="' . $thumb_url . '" ';
+    $output .= 'alt="' . $thumb->post_content . '" width="140" />';
+  }
+
+  $output .= '<div class="related__body">';
+  $output .= '<h3 class="related__head">';
+  $output .= '<a href="' . get_permalink( $post->ID ) . '" ';
+  $output .= 'class="related__link">' . $post->post_title . '</a>';
+  $output .= '</h3>';
+  $output .= '</div>';
+  $output .= '</div>';
+  $output .= '</div>';
+  
+  return $output;
+}
+
+add_shortcode('related', 'elit_related_shortcode' );
+
 /**
  * Source: http://wordpress.stackexchange.com/questions/16070/
  *     how-to-highlight-search-terms-without-plugin

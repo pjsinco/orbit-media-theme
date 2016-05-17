@@ -1,0 +1,15 @@
+.story {
+
+  &__box {
+    overflow: hidden;
+    margin-bottom: 1em;
+    
+    @media screen and (min-width: 600px) {
+      width: 50%;
+      margin-left: 1.5em;
+      margin-bottom: 0;
+      float: right;
+    }
+  }
+
+}

@@ -1,0 +1,56 @@
+.related {
+  font-family: $gotham, $bodyFont; 
+
+  &__title {
+    height: 2.333333333em;
+    margin-bottom: 1em;
+    font-family: "Gotham";
+    font-weight: 200;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    position: relative;
+    top: -3px;
+    line-height: 16px;
+    font-weight: 400;
+    background-image: linear-gradient(left, $pink , $pink 33%, $yellow 33%, $yellow 67%, $blue 67%);
+    background-size: 100% 2px;
+    background-position: 100% 95%;
+    background-repeat: no-repeat;
+  }
+
+  &__img {
+    max-width: 50% !important;
+    float: left;
+    margin-right: 1em;
+  }
+
+  &__body {
+    /*margin-left: 50%;*/
+  }
+
+  &__head {
+    font-size: 18px;
+    line-height: 1.2;
+
+    @media screen and (min-width: 380px) {
+      font-size: 24px;
+    }
+
+    @media screen and (min-width: 600px) {
+      font-size: 18px;
+    }
+
+    /*@media screen and (min-width: $screen-sm-min) {*/
+      /*font-size: 16px;*/
+    /*}*/
+
+    @media screen and (min-width: $screen-md-min) {
+      font-size: 21px;
+    }
+
+  }
+
+}
+
