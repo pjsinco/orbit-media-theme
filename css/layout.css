@@ -11466,6 +11466,8 @@ button.search:hover {
 @media screen and (min-width: 600px) {
   /* line 3, ../sass/features/_elit_story.scss */
   .story__box {
+    position: relative;
+    top: .6875em;
     width: 50%;
     margin-left: 1.5em;
     margin-bottom: 0;
