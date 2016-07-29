@@ -1180,7 +1180,7 @@ function elit_add_fitvids_script() {
 function elit_story_video_shortcode($atts, $content = null ) {
   // we're going to need fitvids
   wp_enqueue_script('fitvids');
-  add_action( 'wp_footer' , 'elit_add_fitvids_script', 50 );
+  add_action( 'wp_footer' , 'elit_add_fitvids_script', 10 );
 
   $a = shortcode_atts(
     array(
