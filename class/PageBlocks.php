@@ -184,9 +184,9 @@ class PageBlocks {
                 $content .= self::textBlock(get_field('text_'.$placement, self::$ID));
 
             } elseif ( $content_type == 'image' ) {
-
-                $content .= self::imageTag(get_field('image_'.$placement, self::$ID));
-                $content .= self::mediaCaption(get_field('caption_'.$placement, self::$ID));
+                //$content .= self::imageTag(get_field('image_'.$placement, self::$ID));
+                //$content .= self::mediaCaption(get_field('caption_'.$placement, self::$ID));
+                $content .= self::solarBoxImage($placement);
 
             } elseif ( $content_type == 'testimonial' ) {
 
@@ -270,6 +270,21 @@ class PageBlocks {
         }
     }
 
+    protected static function solarBoxImage( $placement) 
+    {
+        $thumbnail_src = get_field( 'image_'.$placement, self::$ID );
+        $return = '
+            <div class="pageBlockImage solarBlockImage">
+                <a href="'. $thumbnail_src .'" data-solarbox="pageblock" data-solarheight="400" data-solarwidth="600">
+                  <img src="'. $thumbnail_src . '" />
+                </a>
+            </div><!-- sideBar_VideoInner -->
+        ';
+        if ( $thumbnail_src ) {
+          return $return;
+        }
+
+    }
     protected static function solarBoxVideo( $placement )
     {
 
