@@ -1294,3 +1294,15 @@ function elit_highlight_search($text) {
 }
 add_filter('the_title', 'elit_highlight_search');
 add_filter('the_excerpt', 'elit_highlight_search');
+
+function elit_format_document_title_on_posts( $title ) {
+  if ( ! is_single() ) {
+    return; 
+  }
+
+  global $post;
+  $post->post_title;
+
+  return sprintf( '%s - %s', $post->post_title, get_bloginfo( 'name' ) );
+}
+add_filter( 'pre_get_document_title', 'elit_format_document_title_on_posts' );
