@@ -11476,7 +11476,27 @@ button.search:hover {
   }
 }
 
-/* line 13, ../sass/features/_bb_square.scss */
+/* line 1, ../sass/features/_bb_square.scss */
+.bb_square__item, .bb_square__item--ph {
+  position: relative;
+  margin-bottom: 1rem;
+}
+@media (min-width: 480px) {
+  /* line 1, ../sass/features/_bb_square.scss */
+  .bb_square__item, .bb_square__item--ph {
+    display: inline;
+    max-width: 240px;
+    max-height: 240px;
+  }
+}
+@media (min-width: 480px) {
+  /* line 12, ../sass/features/_bb_square.scss */
+  .bb_square__item:not(:last-of-type), .bb_square__item--ph:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+}
+
+/* line 29, ../sass/features/_bb_square.scss */
 .bb_square__row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11489,8 +11509,8 @@ button.search:hover {
           flex-direction: column;
   margin-bottom: 0;
 }
-@media (min-width: 380px) {
-  /* line 13, ../sass/features/_bb_square.scss */
+@media (min-width: 480px) {
+  /* line 29, ../sass/features/_bb_square.scss */
   .bb_square__row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -11503,25 +11523,38 @@ button.search:hover {
             justify-content: space-between;
   }
 }
-/* line 26, ../sass/features/_bb_square.scss */
-.bb_square__item {
-  margin-bottom: 1rem;
+/* line 45, ../sass/features/_bb_square.scss */
+.bb_square__item:before {
+  content: "Steven Tyso Chandler, DO";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: 10%;
+  color: white;
+  text-align: center;
+  font-family: "gothammedium", "Trebuchet MS", Tahoma, Verdana, sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  font-size: .875rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-@media (min-width: 380px) {
-  /* line 26, ../sass/features/_bb_square.scss */
-  .bb_square__item {
-    display: inline;
-    max-width: 240px;
-    max-height: 240px;
-  }
+/* line 62, ../sass/features/_bb_square.scss */
+.bb_square__item:after {
+  content: "";
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 6%;
+  bottom: 6%;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.65);
 }
-@media (min-width: 380px) {
-  /* line 37, ../sass/features/_bb_square.scss */
-  .bb_square__item:not(:last-of-type) {
-    margin-right: 1rem;
-  }
+/* line 74, ../sass/features/_bb_square.scss */
+.bb_square__item--ph {
+  opacity: .2;
 }
-/* line 44, ../sass/features/_bb_square.scss */
+/* line 80, ../sass/features/_bb_square.scss */
 .bb_square__image {
   width: 100%;
   height: auto;
