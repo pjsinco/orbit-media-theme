@@ -11475,3 +11475,54 @@ button.search:hover {
     float: right;
   }
 }
+
+/* line 13, ../sass/features/_bb_square.scss */
+.bb_square__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0;
+}
+@media (min-width: 380px) {
+  /* line 13, ../sass/features/_bb_square.scss */
+  .bb_square__row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+/* line 26, ../sass/features/_bb_square.scss */
+.bb_square__item {
+  margin-bottom: 1rem;
+}
+@media (min-width: 380px) {
+  /* line 26, ../sass/features/_bb_square.scss */
+  .bb_square__item {
+    display: inline;
+    max-width: 240px;
+    max-height: 240px;
+  }
+}
+@media (min-width: 380px) {
+  /* line 37, ../sass/features/_bb_square.scss */
+  .bb_square__item:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+}
+/* line 44, ../sass/features/_bb_square.scss */
+.bb_square__image {
+  width: 100%;
+  height: auto;
+}

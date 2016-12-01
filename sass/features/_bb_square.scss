@@ -1,0 +1,50 @@
+$screen-xxs: 380px;
+
+.bb_square {
+
+//  display: flex;
+//  flex-direction: row;
+//  flex-wrap: wrap;
+
+  @media(min-width: $screen-sm) {
+
+  }
+
+  &__row {
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+
+    @media (min-width: $screen-xxs) {
+      flex-direction: row;
+      justify-content: space-between;
+//      margin-bottom: 1rem;
+    }
+  }
+
+  &__item {
+
+    margin-bottom: 1rem;
+
+    @media(min-width: $screen-xxs) {
+      display: inline;
+      max-width: 240px;
+      max-height: 240px;
+
+    }
+
+    &:not(:last-of-type) {
+      @media(min-width: $screen-xxs) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+}
+
