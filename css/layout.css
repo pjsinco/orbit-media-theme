@@ -11509,7 +11509,7 @@ button.search:hover {
           transition: opacity .35s, transform .35s;
 }
 
-/* line 49, ../sass/features/_bb_square.scss */
+/* line 52, ../sass/features/_bb_square.scss */
 .bb_square__row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11523,7 +11523,7 @@ button.search:hover {
   margin-bottom: 0;
 }
 @media (min-width: 480px) {
-  /* line 49, ../sass/features/_bb_square.scss */
+  /* line 52, ../sass/features/_bb_square.scss */
   .bb_square__row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -11536,28 +11536,37 @@ button.search:hover {
             justify-content: space-between;
   }
 }
-/* line 94, ../sass/features/_bb_square.scss */
+/* line 68, ../sass/features/_bb_square.scss */
+.bb_square__item--disabled {
+  pointer-events: none;
+  cursor: default;
+}
+/* line 72, ../sass/features/_bb_square.scss */
+.bb_square__item--disabled img {
+  opacity: .2;
+}
+/* line 79, ../sass/features/_bb_square.scss */
 .bb_square__item:hover h5 {
   -webkit-transform: translate3d(0, -20px, 0);
           transform: translate3d(0, -20px, 0);
 }
-/* line 98, ../sass/features/_bb_square.scss */
+/* line 83, ../sass/features/_bb_square.scss */
 .bb_square__item:hover figcaption:before, .bb_square__item:hover figcaption:after {
   opacity: 1;
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
-/* line 105, ../sass/features/_bb_square.scss */
+/* line 90, ../sass/features/_bb_square.scss */
 .bb_square__item--ph {
   opacity: .2;
 }
-/* line 111, ../sass/features/_bb_square.scss */
+/* line 96, ../sass/features/_bb_square.scss */
 .bb_square__image {
   width: 100%;
   height: auto;
 }
-/* line 116, ../sass/features/_bb_square.scss */
+/* line 101, ../sass/features/_bb_square.scss */
 .bb_square figcaption {
   position: absolute;
   top: 0;
@@ -11567,7 +11576,7 @@ button.search:hover {
   text-align: center;
   backspace-visibility: hidden;
 }
-/* line 121, ../sass/features/_bb_square.scss */
+/* line 106, ../sass/features/_bb_square.scss */
 .bb_square figcaption:before {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
@@ -11575,7 +11584,7 @@ button.search:hover {
       -ms-transform: scale(0, 1);
           transform: scale(0, 1);
 }
-/* line 128, ../sass/features/_bb_square.scss */
+/* line 113, ../sass/features/_bb_square.scss */
 .bb_square figcaption:after {
   border-left: 1px solid white;
   border-right: 1px solid white;
@@ -11583,7 +11592,7 @@ button.search:hover {
       -ms-transform: scale(1, 0);
           transform: scale(1, 0);
 }
-/* line 135, ../sass/features/_bb_square.scss */
+/* line 120, ../sass/features/_bb_square.scss */
 .bb_square figcaption h5 {
   position: absolute;
   left: 18%;
@@ -11602,7 +11611,7 @@ button.search:hover {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
-/* line 152, ../sass/features/_bb_square.scss */
+/* line 137, ../sass/features/_bb_square.scss */
 .bb_square figcaption a {
   position: absolute;
   top: 0;

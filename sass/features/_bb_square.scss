@@ -46,6 +46,9 @@
 
   }
 
+  &--disabled {
+  }
+
   &__row {
 
     display: flex;
@@ -62,32 +65,14 @@
   &__item {
     @extend %bb_square__item-base;
 
-//    &:before {
-//      content: "";
-//      position: absolute;
-//      left: 18%;
-//      right: 18%;
-//      bottom: 10%;
-//      color: white;
-//      text-align: center;
-//      font-family: $gothamBold, "Trebuchet MS", Tahoma, Verdana, sans-serif;
-//      font-weight: 400;
-//      line-height: 1.4;
-//      font-size: .875rem;
-//      letter-spacing: 1px;
-//      text-transform: uppercase;
-//    }
-//
-//    &:after {
-//      content: "";
-//      position: absolute;
-//      left: 6%;
-//      right: 6%;
-//      top: 6%;
-//      bottom: 6%;
-//      color: white;
-//      border: 1px solid rgba(255,255,255,.65);
-//    }
+    &--disabled {
+      pointer-events: none;
+      cursor: default;
+
+      & img {
+        opacity: .2;
+      }
+    }
 
     &:hover {
     

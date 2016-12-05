@@ -1306,3 +1306,50 @@ function elit_format_document_title_on_posts( $title ) {
   return sprintf( '%s - %s', $post->post_title, get_bloginfo( 'name' ) );
 }
 add_filter( 'pre_get_document_title', 'elit_format_document_title_on_posts' );
+
+
+/**
+ * One-off short-code to display *one* particular OMS Persistent Widget:
+ *   The one with the brady-bunch-style "Meet Doctors That DO" content.
+ *
+ */
+function elit_meet_dtd_shortcode( $atts ) {
+
+
+  $meet_dtd_post_id = 7905;
+
+  extract(
+    shortcode_atts(
+      array(
+        'title' => '',
+        'disabled_index' => ''
+      ), $atts
+    )
+  );
+
+
+  $fields = get_fields($meet_dtd_post_id);
+
+  $html = "<h4>$title</h4>";
+  $html .= $fields['oms_open_content'];
+
+  if ( !empty( $disabled_index ) ) {
+    /**
+     * http://stackoverflow.com/questions/19907155/
+     *   how-to-replace-a-nth-occurrence-in-a-string
+     *
+     */
+    $nth = ( int ) $disabled_index - 1;
+    $pattern = 'bb_square__item';
+    $found = preg_match_all( '/' . $pattern . '/', $html, $matches, PREG_OFFSET_CAPTURE );
+    $html = substr_replace( 
+      $html, 
+      "$pattern bb_square__item--disabled", 
+      $matches[0][$nth][1], 
+      strlen( $pattern ) 
+    );
+  }
+
+  return $html;
+}
+add_shortcode( 'meet-dtd', 'elit_meet_dtd_shortcode' );
