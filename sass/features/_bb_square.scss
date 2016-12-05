@@ -19,10 +19,10 @@
 %figcaption-before-after-base {
   position: absolute;
   content: '';
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
+  top: 12%;
+  right: 12%;
+  bottom: 12%;
+  left: 12%;
   opacity: 0;
   transition: opacity .35s, transform .35s;
 }
@@ -92,7 +92,7 @@
     &:hover {
     
       & h5 {
-        transform: translate3d(0,0,0);
+        transform: translate3d(0,-20px,0);
       }
 
       & figcaption:before, & figcaption:after {
@@ -111,7 +111,6 @@
   &__image {
     width: 100%;
     height: auto;
-
   }
 
   & figcaption {
@@ -147,7 +146,7 @@
       text-transform: uppercase;
       color: white;
       transition: transform .35s;
-      transform: translate3d(0,-20px,0);
+      transform: translate3d(0,0,0);
     }
 
     & a {

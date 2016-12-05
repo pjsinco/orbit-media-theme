@@ -11500,10 +11500,10 @@ button.search:hover {
 .bb_square figcaption:before, .bb_square figcaption:after {
   position: absolute;
   content: '';
-  top: 30px;
-  right: 30px;
-  bottom: 30px;
-  left: 30px;
+  top: 12%;
+  right: 12%;
+  bottom: 12%;
+  left: 12%;
   opacity: 0;
   -webkit-transition: opacity .35s, -webkit-transform .35s;
           transition: opacity .35s, transform .35s;
@@ -11538,8 +11538,8 @@ button.search:hover {
 }
 /* line 94, ../sass/features/_bb_square.scss */
 .bb_square__item:hover h5 {
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, -20px, 0);
+          transform: translate3d(0, -20px, 0);
 }
 /* line 98, ../sass/features/_bb_square.scss */
 .bb_square__item:hover figcaption:before, .bb_square__item:hover figcaption:after {
@@ -11557,7 +11557,7 @@ button.search:hover {
   width: 100%;
   height: auto;
 }
-/* line 117, ../sass/features/_bb_square.scss */
+/* line 116, ../sass/features/_bb_square.scss */
 .bb_square figcaption {
   position: absolute;
   top: 0;
@@ -11567,7 +11567,7 @@ button.search:hover {
   text-align: center;
   backspace-visibility: hidden;
 }
-/* line 122, ../sass/features/_bb_square.scss */
+/* line 121, ../sass/features/_bb_square.scss */
 .bb_square figcaption:before {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
@@ -11575,7 +11575,7 @@ button.search:hover {
       -ms-transform: scale(0, 1);
           transform: scale(0, 1);
 }
-/* line 129, ../sass/features/_bb_square.scss */
+/* line 128, ../sass/features/_bb_square.scss */
 .bb_square figcaption:after {
   border-left: 1px solid white;
   border-right: 1px solid white;
@@ -11583,7 +11583,7 @@ button.search:hover {
       -ms-transform: scale(1, 0);
           transform: scale(1, 0);
 }
-/* line 136, ../sass/features/_bb_square.scss */
+/* line 135, ../sass/features/_bb_square.scss */
 .bb_square figcaption h5 {
   position: absolute;
   left: 18%;
@@ -11599,10 +11599,10 @@ button.search:hover {
   color: white;
   -webkit-transition: -webkit-transform .35s;
           transition: transform .35s;
-  -webkit-transform: translate3d(0, -20px, 0);
-          transform: translate3d(0, -20px, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
-/* line 153, ../sass/features/_bb_square.scss */
+/* line 152, ../sass/features/_bb_square.scss */
 .bb_square figcaption a {
   position: absolute;
   top: 0;
