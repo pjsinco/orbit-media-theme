@@ -11387,7 +11387,9 @@ button.search:hover {
 }
 
 /* line 1, ../sass/features/_elit_dropcap.scss */
-.single .post > p:first-of-type:first-letter {
+.single .post > p:first-of-type:first-letter,
+.dropcap,
+.dropcap--orange {
   height: .7em;
   margin: .13em 0 -.05em 0;
   padding: 0 .1em 0 0;
@@ -11395,6 +11397,15 @@ button.search:hover {
   line-height: .7em;
   float: left;
   color: #ffaa00;
+}
+
+/* line 14, ../sass/features/_elit_dropcap.scss */
+.dropcap--pink {
+  color: #d45dcc;
+}
+/* line 18, ../sass/features/_elit_dropcap.scss */
+.dropcap--blue {
+  color: #01eaff;
 }
 
 /* line 1, ../sass/features/_elit_related.scss */

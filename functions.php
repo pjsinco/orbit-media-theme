@@ -1330,7 +1330,7 @@ function elit_meet_dtd_shortcode( $atts ) {
 
   $fields = get_fields($meet_dtd_post_id);
 
-  $html = "<h4>$title</h4>";
+  $html = "<h4 style='margin-top: 2em;'>$title</h4>";
   $html .= $fields['oms_open_content'];
 
   if ( !empty( $disabled_index ) ) {
