@@ -1,4 +1,5 @@
-.single .post > p:first-of-type:first-letter {
+.single .post > p:first-of-type:first-letter, 
+.dropcap {
     height: .7em;
     margin: .13em 0 -.05em 0;
     padding: 0 .1em 0 0;
@@ -6,4 +7,20 @@
     line-height: .7em;
     float: left;
     color: $yellow;
+}
+
+.dropcap {
+  
+  &--pink {
+    color: $pink;
+  }
+
+  &--blue {
+    color: $blue;  
+  }
+
+  &--orange {
+    @extend .dropcap;
+  }
+
 }
