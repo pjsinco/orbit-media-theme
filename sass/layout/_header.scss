@@ -321,6 +321,8 @@ button.search {
                 //     a {
                 //         padding-left: 45px;
                 //     }
+                // }
+              
 
                 li.active,
                 li.current_page_parent,
@@ -494,7 +496,7 @@ button.search {
 
     @media (min-width: 1030px) {
         a {
-            font-size: 16px;
+            font-size: 15px;
         }
     }
     @media (min-width: $screen-md-max) {
