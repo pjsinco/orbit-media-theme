@@ -9752,8 +9752,7 @@ button.search:hover {
   position: relative;
   top: -49px;
   padding: 18px 0 10px 0;
-  /*background: rgba(#b5790b, 0.9);*/
-  background: #1abdcc;
+  background-color: #ffffff;
 }
 @media (min-width: 480px) {
   /* line 38, ../sass/features/_heroForm.scss */
@@ -9779,10 +9778,10 @@ button.search:hover {
   .hero--band {
     position: absolute;
     top: auto;
-    bottom: 0;
+    bottom: 30px;
     left: 0;
     right: 0;
-    background: rgba(26, 189, 204, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -9792,21 +9791,22 @@ button.search:hover {
   }
 }
 
-/* line 79, ../sass/features/_heroForm.scss */
+/* line 80, ../sass/features/_heroForm.scss */
 .hero--message {
-  font-family: "gothambook";
-  font-weight: 400;
+  font-family: "gothammedium", Helvetica, sans-serif;
+  font-weight: 500;
   padding-bottom: 0;
   margin-bottom: .5em;
-  color: #fff;
+  color: #969696;
   font-size: 16px;
   line-height: 23px;
+  letter-spacing: -.25px;
   /*@media (min-width: $screen-md-min) {*/
   /*font-size: 25px;*/
   /*}*/
 }
 @media (min-width: 768px) {
-  /* line 79, ../sass/features/_heroForm.scss */
+  /* line 80, ../sass/features/_heroForm.scss */
   .hero--message {
     margin-bottom: .75em;
     font-size: 18px;
@@ -9814,7 +9814,7 @@ button.search:hover {
   }
 }
 @media (min-width: 1200px) {
-  /* line 79, ../sass/features/_heroForm.scss */
+  /* line 80, ../sass/features/_heroForm.scss */
   .hero--message {
     margin-bottom: 1em;
     font-size: 21px;
@@ -9822,7 +9822,7 @@ button.search:hover {
   }
 }
 
-/* line 110, ../sass/features/_heroForm.scss */
+/* line 112, ../sass/features/_heroForm.scss */
 .hero--title {
   font-family: "gothammedium", Helvetica, sans-serif;
   font-weight: 500;
@@ -9831,17 +9831,17 @@ button.search:hover {
   font-size: 23px;
   line-height: 1.75;
   text-transform: uppercase;
-  color: #fff;
+  color: #ffaa00;
 }
 @media (max-width: 768px) {
-  /* line 110, ../sass/features/_heroForm.scss */
+  /* line 112, ../sass/features/_heroForm.scss */
   .hero--title {
     padding-top: 5px;
     padding-bottom: 0;
   }
 }
 @media (min-width: 992px) {
-  /* line 110, ../sass/features/_heroForm.scss */
+  /* line 112, ../sass/features/_heroForm.scss */
   .hero--title {
     /*font-size: 2.8vw;*/
     font-size: 90%;
@@ -9849,13 +9849,13 @@ button.search:hover {
   }
 }
 @media (min-width: 1199px) {
-  /* line 110, ../sass/features/_heroForm.scss */
+  /* line 112, ../sass/features/_heroForm.scss */
   .hero--title {
     /*font-size: 2.1vw;*/
   }
 }
 @media (min-width: 1670px) {
-  /* line 110, ../sass/features/_heroForm.scss */
+  /* line 112, ../sass/features/_heroForm.scss */
   .hero--title {
     /*font-size: 35px;*/
     font-size: 100%;
@@ -9863,70 +9863,70 @@ button.search:hover {
 }
 
 @media (min-width: 768px) {
-  /* line 140, ../sass/features/_heroForm.scss */
+  /* line 142, ../sass/features/_heroForm.scss */
   .hero--form form {
     display: table;
     width: 100%;
   }
 }
 
-/* line 148, ../sass/features/_heroForm.scss */
+/* line 150, ../sass/features/_heroForm.scss */
 .hero--form--inner {
   margin-bottom: .5em;
 }
 @media (min-width: 768px) {
-  /* line 148, ../sass/features/_heroForm.scss */
+  /* line 150, ../sass/features/_heroForm.scss */
   .hero--form--inner {
     /*display: table-cell;*/
     /*vertical-align: top;*/
   }
 }
-/* line 168, ../sass/features/_heroForm.scss */
+/* line 170, ../sass/features/_heroForm.scss */
 .hero--form--inner .row, .hero--form--inner .interior-content {
   /*margin-right: -5px;*/
   /*margin-left: -5px;*/
 }
-/* line 173, ../sass/features/_heroForm.scss */
+/* line 175, ../sass/features/_heroForm.scss */
 .hero--form--inner .col-sm-6 {
   padding: 0 5px;
 }
-/* line 177, ../sass/features/_heroForm.scss */
+/* line 179, ../sass/features/_heroForm.scss */
 .hero--form--inner .location {
   margin-bottom: 1em;
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  /* line 177, ../sass/features/_heroForm.scss */
+  /* line 179, ../sass/features/_heroForm.scss */
   .hero--form--inner .location {
     /*width: 40%;*/
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
-  /* line 183, ../sass/features/_heroForm.scss */
+  /* line 185, ../sass/features/_heroForm.scss */
   .hero--form--inner .specialty {
     width: 60%;
   }
 }
 
-/* line 212, ../sass/features/_heroForm.scss */
+/* line 214, ../sass/features/_heroForm.scss */
 .hero--form--button {
   height: 50px;
 }
 @media (min-width: 768px) {
-  /* line 212, ../sass/features/_heroForm.scss */
+  /* line 214, ../sass/features/_heroForm.scss */
   .hero--form--button {
     /*width: 1%;*/
     /*display: table-cell;*/
   }
 }
 @media (min-width: 768px) {
-  /* line 221, ../sass/features/_heroForm.scss */
+  /* line 223, ../sass/features/_heroForm.scss */
   .hero--form--button button {
     /*width: 136px;*/
     height: 51.5px;
     margin-left: 10px;
   }
 }
-/* line 232, ../sass/features/_heroForm.scss */
+/* line 234, ../sass/features/_heroForm.scss */
 .hero--form--button--inside button {
   margin-left: 0;
 }

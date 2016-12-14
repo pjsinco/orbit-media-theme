@@ -39,8 +39,9 @@ $pinhero: 1162px;
     position: relative;
     top: -49px;
     padding: 18px 0 10px 0;
-    /*background: rgba(#b5790b, 0.9);*/
-    background: #1abdcc;
+//    background: rgba(#b5790b, 0.9);
+//    background: #1abdcc;
+    background-color: #ffffff;
 
     @media (min-width: $screen-xs-min) {
       top: -70px;
@@ -58,10 +59,10 @@ $pinhero: 1162px;
     @media (min-width: $pinhero) {
       position: absolute;
       top: auto;
-      bottom: 0;
+      bottom: 30px;
       left: 0;
       right: 0;
-      background: rgba(#1abdcc, .7);
+      background-color: rgba(#ffffff, .9);
     }
 
     // @media (min-width: $screen-md-min) {
@@ -77,12 +78,13 @@ $pinhero: 1162px;
 }
 
 .hero--message {
-    @include webFont();
+    @include webFont('bold');
     padding-bottom: 0;
     margin-bottom: .5em;
-    color: #fff;
+    color: #969696;
     font-size: 16px;
     line-height: 23px;
+    letter-spacing: -.25px;
 
     @media (min-width: $screen-sm-min) {
 
@@ -114,7 +116,7 @@ $pinhero: 1162px;
     font-size: 23px;
     line-height: 1.75;
     text-transform: uppercase;
-    color: #fff;
+    color: $yellow;
 
     @media (max-width: $screen-sm-min) {
         padding-top: 5px;
