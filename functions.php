@@ -272,8 +272,19 @@ function orbit_enqueue_scripts()
             'forms', get_stylesheet_directory_uri() . '/js/forms.js', array( 'jquery' ), '', true
         );
 
-        wp_enqueue_style( 'layout', get_stylesheet_directory_uri().'/css/layout.css' );
-        wp_enqueue_style( 'default', get_stylesheet_directory_uri().'/css/default.css' );
+        wp_enqueue_style( 
+          'layout', 
+          get_stylesheet_directory_uri().'/css/layout.css',
+          array(),
+          filemtime( get_template_directory() . '/css/layout.css' )
+        );
+
+        wp_enqueue_style( 
+          'default', 
+          get_stylesheet_directory_uri().'/css/default.css',
+          array(),
+          filemtime( get_template_directory() . '/css/default.css' )
+        );
     }
 }
 
