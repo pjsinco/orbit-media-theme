@@ -6,7 +6,7 @@
 
         <div id="right">
 
-            <p class="back-link"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">&lsaquo;&nbsp;Back to Health Library</a></p>
+            <p class="back-link"><a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">&lsaquo;&nbsp;Back to Healthy Living</a></p>
 
             <div class="row">
                 <div class="mainContent" id="content">
