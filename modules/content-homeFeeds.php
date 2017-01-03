@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-sm-8 col-md-6 feed blog">
                 <header class="feed--title">
-                    <a href="/health-library/">The Health Library&nbsp;&rsaquo;</a>
+                    <a href="/healthy-living/">Healthy Living&nbsp;&rsaquo;</a>
                 </header> <!--  .feed--title -->
                 <section class="feed--output">
 
