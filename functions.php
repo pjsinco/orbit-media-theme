@@ -1433,3 +1433,18 @@ function elit_meet_dtd_shortcode( $atts ) {
   return $html;
 }
 add_shortcode( 'meet-dtd', 'elit_meet_dtd_shortcode' );
+
+function elit_dropcap_shortcode( $atts = array(), $content = null ) {
+  extract(
+    shortcode_atts(
+      array(
+        'color' => 'orange',
+      ), $atts
+    )
+  );
+
+  $content = '<span class="dropcap dropcap--' . $color . '">' . $content . '</span>';
+
+  return $content;
+}
+add_shortcode( 'dropcap', 'elit_dropcap_shortcode' );
