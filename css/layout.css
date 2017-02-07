@@ -11426,8 +11426,7 @@ button.search:hover {
 
 /* line 1, ../sass/features/_elit_dropcap.scss */
 .single .post > p:first-of-type:first-letter,
-.dropcap,
-.dropcap--orange {
+.dropcap {
   height: .7em;
   margin: .13em 0 -.05em 0;
   padding: 0 .1em 0 0;
@@ -11444,6 +11443,10 @@ button.search:hover {
 /* line 18, ../sass/features/_elit_dropcap.scss */
 .dropcap--blue {
   color: #01eaff;
+}
+/* line 22, ../sass/features/_elit_dropcap.scss */
+.dropcap--orange {
+  color: #ffaa00;
 }
 
 /* line 1, ../sass/features/_elit_related.scss */
