@@ -1319,6 +1319,75 @@ function elit_format_document_title_on_posts( $title ) {
 add_filter( 'pre_get_document_title', 'elit_format_document_title_on_posts' );
 
 
+function elit_dtd_settings() {
+
+  register_setting( 'meetdtd', 'meetdtd_widget_id' );
+
+  add_settings_section(
+    'meetdtd_widget_id_section',
+    'Meet Doctors That DO',
+    'meetdtd_widget_id_section_cb',
+    'meetdtd'
+  );
+
+  add_settings_field(
+    'meetdtd_field_input',
+    'Widget ID',
+    'meetdtd_field_input_cb',
+    'meetdtd',
+    'meetdtd_widget_id_section'
+  );
+
+}
+add_action('admin_init', 'elit_dtd_settings');
+
+function meetdtd_widget_id_section_cb( $args ) {
+  echo '<h4>The ID of the OMS Persistent Widget that displays the Meet Doctors That DO grid</h4>';
+}
+
+function meetdtd_field_input_cb() {
+  $setting = get_option('meetdtd_widget_id');
+  ?>
+  <input type="text" name="meetdtd_widget_id" value="<?php echo (isset( $setting ) ? esc_attr( $setting ) : ''); ?>"> 
+  <?php
+}
+
+function meetdtd_widget_id_page() {
+
+  add_options_page(  
+    'Meet Doctors That DO',
+    'Meet Doctors That DO Options',
+    'manage_options',
+    'meetdtd',
+    'meetdtd_widget_id_page_html'
+  );
+
+}
+add_action('admin_menu' , 'meetdtd_widget_id_page');
+
+function meetdtd_widget_id_page_html() {
+
+  if ( !current_user_can( 'manage_options' ) ) {
+    return;
+  }
+
+  ?>
+  <div class="wrap">
+    <h1><?php esc_html( get_admin_page_title() ); ?></h1>
+
+    <form method="POST" action="options.php">
+      <?php
+        settings_fields('meetdtd');
+        do_settings_sections('meetdtd');
+        submit_button('Save');
+      ?>
+    </form>
+  <div class="wrap">
+  
+  <?php
+}
+
+
 /**
  * One-off short-code to display *one* particular OMS Persistent Widget:
  *   The one with the brady-bunch-style "Meet Doctors That DO" content.
@@ -1327,7 +1396,7 @@ add_filter( 'pre_get_document_title', 'elit_format_document_title_on_posts' );
 function elit_meet_dtd_shortcode( $atts ) {
 
 
-  $meet_dtd_post_id = 7905;
+  $meetdtd_widget_id = get_option( 'meetdtd_widget_id' );
 
   extract(
     shortcode_atts(
@@ -1339,7 +1408,7 @@ function elit_meet_dtd_shortcode( $atts ) {
   );
 
 
-  $fields = get_fields($meet_dtd_post_id);
+  $fields = get_fields($meetdtd_widget_id);
 
   $html = "<h4 style='margin-top: 2em;'>$title</h4>";
   $html .= $fields['oms_open_content'];
