@@ -1448,3 +1448,30 @@ function elit_dropcap_shortcode( $atts = array(), $content = null ) {
   return $content;
 }
 add_shortcode( 'dropcap', 'elit_dropcap_shortcode' );
+
+/**
+ * TESTING: 
+ * Notify Patrick when post status changes
+ *
+ */
+function elit_notify_of_post_status_change($new_status, $old_status, $post) {
+  if ( 'publish' !== $new_status || $new_status === $old_status ||
+       empty($new_status) || empty($old_status) ) {
+    return;
+  }
+
+  $post_title = wp_kses_decode_entities(get_the_title( $post->ID ));
+  $post_url = get_permalink( $post->ID );
+  $subject = "Status change in '" . $post_title . "'";
+  $message = "A post has been updated on " . get_bloginfo('name') . ":\n\n";
+  //$message .= "<a href='" . $post_url. "'>" . $post_title . "</a>\n\n";
+  $message .= $post_title . PHP_EOL;
+  $message .= $post_url . PHP_EOL . PHP_EOL;
+  $message .= "Old status: " . print_r($old_status, true) . PHP_EOL;
+  $message .= "New status: " . print_r($new_status, true) . PHP_EOL;
+
+  // send mail to PJS
+  $headers = 'Content-Type: text/plain' . "\r\n";
+  wp_mail('psinco@osteopathic.org', $subject, $message, $headers);
+}
+add_action('transition_post_status', 'elit_notify_of_post_status_change', 10, 3);
