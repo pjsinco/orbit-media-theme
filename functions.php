@@ -1456,7 +1456,8 @@ add_shortcode( 'dropcap', 'elit_dropcap_shortcode' );
  */
 function elit_notify_of_post_status_change($new_status, $old_status, $post) {
   if ( 'publish' !== $new_status || $new_status === $old_status ||
-       empty($new_status) || empty($old_status) ) {
+       empty($new_status) || empty($old_status) || ($post->post_type !== 'post' &&
+       $post->post_type !== 'page' ) ) {
     return;
   }
 
