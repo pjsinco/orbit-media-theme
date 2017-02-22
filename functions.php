@@ -1455,16 +1455,29 @@ add_shortcode( 'dropcap', 'elit_dropcap_shortcode' );
  *
  */
 function elit_notify_of_post_status_change($new_status, $old_status, $post) {
-  if ( 'publish' !== $new_status || $new_status === $old_status ||
-       empty($new_status) || empty($old_status) || ($post->post_type !== 'post' &&
+  //if ( 'publish' !== $new_status || $new_status === $old_status ||
+       //empty($new_status) || empty($old_status) || ($post->post_type !== 'post' &&
+       //$post->post_type !== 'page' ) ) {
+    //return;
+  //}
+
+  if ( 'publish' !== $new_status || empty($new_status) || 
+       empty($old_status) || ($post->post_type !== 'post' &&
        $post->post_type !== 'page' ) ) {
-    return;
+      return;
+  }
+
+  $modified_author_id = get_post_meta( $post->ID, '_edit_last' );
+
+  if ( $modified_author_id ) {
+    $modified_author_name = get_the_author_meta( 'display_name', $modified_author_id, true );
   }
 
   $post_title = wp_kses_decode_entities(get_the_title( $post->ID ));
   $post_url = get_permalink( $post->ID );
   $subject = "Status change in '" . $post_title . "'";
-  $message = "A post has been updated on " . get_bloginfo('name') . ":\n\n";
+  $message  = ( $modified_author_name ? $modified_author_name . ' has updated a post on ' : 'A post has been updated on ');
+  $message .= get_bloginfo('name') . "\n\n";
   //$message .= "<a href='" . $post_url. "'>" . $post_title . "</a>\n\n";
   $message .= $post_title . PHP_EOL;
   $message .= $post_url . PHP_EOL . PHP_EOL;
