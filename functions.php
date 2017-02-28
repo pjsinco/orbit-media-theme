@@ -1467,7 +1467,7 @@ function elit_notify_of_post_status_change($new_status, $old_status, $post) {
       return;
   }
 
-  $modified_author_id = get_post_meta( $post->ID, '_edit_last' );
+  $modified_author_id = get_post_meta( $post->ID, '_edit_last', true );
 
   if ( $modified_author_id ) {
     $modified_author_name = get_the_author_meta( 'display_name', $modified_author_id, true );
