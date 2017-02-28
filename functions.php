@@ -1484,8 +1484,10 @@ function elit_notify_of_post_status_change($new_status, $old_status, $post) {
   $message .= "Old status: " . print_r($old_status, true) . PHP_EOL;
   $message .= "New status: " . print_r($new_status, true) . PHP_EOL;
 
-  // send mail to PJS
+  // send mail
   $headers = 'Content-Type: text/plain' . "\r\n";
-  wp_mail('psinco@osteopathic.org', $subject, $message, $headers);
+  $recipients = array( 'psinco@osteopathic.org', 'bjohnson@osteopathic.org' );
+   
+  wp_mail( $recipients, $subject, $message, $headers );
 }
 add_action('transition_post_status', 'elit_notify_of_post_status_change', 10, 3);
