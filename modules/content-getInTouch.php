@@ -62,7 +62,7 @@
 
             <div class="contact--phone">
                 <?php if ( ! empty( $tel )) : ?>
-                    <div>Phone: <?php echo esc_html( $tel ); ?></div>
+                    <div>Phone: <?php echo ( $tel ); ?></div>
                 <?php endif; ?>
             </div> <!--  .contact--phone -->
             <div class="contact--fax">
