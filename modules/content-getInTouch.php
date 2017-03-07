@@ -56,16 +56,10 @@
         <div class="contact">
 
             <?php
-                $toll = get_field( 'toll_number', 'options' );
                 $tel = get_field( 'phone_number', 'options' );
                 $fax = get_field( 'fax_number', 'options' );
             ?>
 
-            <div class="contact--toll">
-                <?php if ( ! empty( $toll )) : ?>
-                    <div>Toll-Free Phone: <?php echo esc_html( $toll ); ?></div>
-                <?php endif; ?>
-            </div> <!--  .contact--toll -->
             <div class="contact--phone">
                 <?php if ( ! empty( $tel )) : ?>
                     <div>Phone: <?php echo esc_html( $tel ); ?></div>
