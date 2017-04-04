@@ -563,3 +563,8 @@ a.link-button:hover, p.link-button a:hover, a span.link-button:hover, a.button:h
   background-image: none;
   background-color: #d45dcc;
 }
+
+/* line 176, ../sass/default.scss */
+p:empty {
+  display: none;
+}

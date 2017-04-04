@@ -172,3 +172,7 @@ ul li {
 a.link-button, p.link-button a, a span.link-button, a.button, input[type="submit"].link-button, input[type="image"].link-button, div.link-button {
     @include button();
 }
+
+p:empty {
+  display: none;
+}
