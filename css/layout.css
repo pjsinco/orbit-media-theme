@@ -11538,40 +11538,46 @@ button.search:hover {
 }
 
 /* line 1, ../sass/features/_bb_square.scss */
-.bb_square__item, .bb_square__item--ph {
+.bb_square__item, .bb_square__item--full, .bb_square__item--ph {
   position: relative;
   margin-bottom: 1rem;
 }
 @media (min-width: 480px) {
   /* line 1, ../sass/features/_bb_square.scss */
-  .bb_square__item, .bb_square__item--ph {
+  .bb_square__item, .bb_square__item--full, .bb_square__item--ph {
     display: inline;
-    max-width: 240px;
-    max-height: 240px;
   }
 }
 @media (min-width: 480px) {
-  /* line 12, ../sass/features/_bb_square.scss */
-  .bb_square__item:not(:last-of-type), .bb_square__item--ph:not(:last-of-type) {
+  /* line 9, ../sass/features/_bb_square.scss */
+  .bb_square__item:not(:last-of-type), .bb_square__item--full:not(:last-of-type), .bb_square__item--ph:not(:last-of-type) {
     margin-right: 1rem;
   }
 }
 
-/* line 19, ../sass/features/_bb_square.scss */
+@media (min-width: 480px) {
+  /* line 16, ../sass/features/_bb_square.scss */
+  .bb_square__item, .bb_square__item--ph {
+    max-width: 240px;
+    max-height: 240px;
+  }
+}
+
+/* line 23, ../sass/features/_bb_square.scss */
 .bb_square figcaption:before, .bb_square figcaption:after {
   position: absolute;
   content: '';
-  top: 12%;
-  right: 12%;
-  bottom: 12%;
-  left: 12%;
+  top: 24px;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
   opacity: 0;
   -webkit-transition: opacity .35s, -webkit-transform .35s;
           transition: opacity .35s, transform .35s;
 }
 
-/* line 41, ../sass/features/_bb_square.scss */
-.bb_square__title {
+/* line 43, ../sass/features/_bb_square.scss */
+.bb__title {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 18px;
@@ -11579,12 +11585,13 @@ button.search:hover {
   line-height: 1.6;
 }
 @media (min-width: 480px) {
-  /* line 41, ../sass/features/_bb_square.scss */
-  .bb_square__title {
+  /* line 43, ../sass/features/_bb_square.scss */
+  .bb__title {
     margin-bottom: .5rem;
   }
 }
-/* line 56, ../sass/features/_bb_square.scss */
+
+/* line 55, ../sass/features/_bb_square.scss */
 .bb_square__row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11596,7 +11603,7 @@ button.search:hover {
   margin-bottom: 0;
 }
 @media (min-width: 480px) {
-  /* line 56, ../sass/features/_bb_square.scss */
+  /* line 55, ../sass/features/_bb_square.scss */
   .bb_square__row {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -11607,36 +11614,45 @@ button.search:hover {
             justify-content: space-between;
   }
 }
-/* line 71, ../sass/features/_bb_square.scss */
+
+/* line 70, ../sass/features/_bb_square.scss */
 .bb_square__item--disabled {
   pointer-events: none;
   cursor: default;
 }
-/* line 75, ../sass/features/_bb_square.scss */
+/* line 74, ../sass/features/_bb_square.scss */
 .bb_square__item--disabled img {
   opacity: .2;
 }
-/* line 82, ../sass/features/_bb_square.scss */
-.bb_square__item:hover h5 {
+
+/* line 90, ../sass/features/_bb_square.scss */
+.bb_square__item--full:hover figcaption h4, .bb_square__item--full:hover figcaption h5,
+.bb_square__item:hover figcaption h4,
+.bb_square__item:hover figcaption h5 {
   -webkit-transform: translate3d(0, -20px, 0);
           transform: translate3d(0, -20px, 0);
 }
-/* line 86, ../sass/features/_bb_square.scss */
-.bb_square__item:hover figcaption:before, .bb_square__item:hover figcaption:after {
+/* line 95, ../sass/features/_bb_square.scss */
+.bb_square__item--full:hover figcaption:before, .bb_square__item--full:hover figcaption:after,
+.bb_square__item:hover figcaption:before,
+.bb_square__item:hover figcaption:after {
   opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
-/* line 93, ../sass/features/_bb_square.scss */
+
+/* line 102, ../sass/features/_bb_square.scss */
 .bb_square__item--ph {
   opacity: .2;
 }
-/* line 99, ../sass/features/_bb_square.scss */
+
+/* line 108, ../sass/features/_bb_square.scss */
 .bb_square__image {
   width: 100%;
   height: auto;
 }
-/* line 104, ../sass/features/_bb_square.scss */
+
+/* line 114, ../sass/features/_bb_square.scss */
 .bb_square figcaption {
   position: absolute;
   top: 0;
@@ -11646,21 +11662,21 @@ button.search:hover {
   text-align: center;
   backspace-visibility: hidden;
 }
-/* line 109, ../sass/features/_bb_square.scss */
+/* line 119, ../sass/features/_bb_square.scss */
 .bb_square figcaption:before {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   -webkit-transform: scale(0, 1);
           transform: scale(0, 1);
 }
-/* line 116, ../sass/features/_bb_square.scss */
+/* line 126, ../sass/features/_bb_square.scss */
 .bb_square figcaption:after {
   border-left: 1px solid white;
   border-right: 1px solid white;
   -webkit-transform: scale(1, 0);
           transform: scale(1, 0);
 }
-/* line 123, ../sass/features/_bb_square.scss */
+/* line 133, ../sass/features/_bb_square.scss */
 .bb_square figcaption h5 {
   position: absolute;
   left: 18%;
@@ -11679,7 +11695,22 @@ button.search:hover {
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
 }
-/* line 140, ../sass/features/_bb_square.scss */
+/* line 150, ../sass/features/_bb_square.scss */
+.bb_square figcaption h4 {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  font-family: "gothammedium";
+  letter-spacing: -1px;
+  line-height: 1.6;
+  -webkit-transition: -webkit-transform .35s;
+          transition: transform .35s;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+/* line 163, ../sass/features/_bb_square.scss */
 .bb_square figcaption a {
   position: absolute;
   top: 0;
