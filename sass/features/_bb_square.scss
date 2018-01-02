@@ -4,9 +4,6 @@
 
   @media(min-width: $screen-xs) {
     display: inline;
-    max-width: 240px;
-    max-height: 240px;
-
   }
 
   &:not(:last-of-type) {
@@ -16,13 +13,20 @@
   }
 }
 
+%bb_square-default-size {
+  @media(min-width: $screen-xs) {
+    max-width: 240px;
+    max-height: 240px;
+  }
+}
+
 %figcaption-before-after-base {
   position: absolute;
   content: '';
-  top: 12%;
-  right: 12%;
-  bottom: 12%;
-  left: 12%;
+  top: 24px;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
   opacity: 0;
   transition: opacity .35s, transform .35s;
 }
@@ -36,114 +40,130 @@
 }
 
 
-.bb_square {
+.bb__title {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.6;
 
-  &__title {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.6;
-
-    @media(min-width: $screen-xs) {
-      margin-bottom: .5rem;
-    }
+  @media(min-width: $screen-xs) {
+    margin-bottom: .5rem;
   }
+}
+
+.bb_square__row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+
+  @media (min-width: $screen-xs) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.bb_square__item {
+  @extend %bb_square__item-base;
+  @extend %bb_square-default-size;
 
   &--disabled {
-  }
+    pointer-events: none;
+    cursor: default;
 
-  &__row {
-
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0;
-
-    @media (min-width: $screen-xs) {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-
-  &__item {
-    @extend %bb_square__item-base;
-
-    &--disabled {
-      pointer-events: none;
-      cursor: default;
-
-      & img {
-        opacity: .2;
-      }
-    }
-
-    &:hover {
-    
-      & h5 {
-        transform: translate3d(0,-20px,0);
-      }
-
-      & figcaption:before, & figcaption:after {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    // placeholder
-    &--ph {
-      @extend %bb_square__item-base;
+    & img {
       opacity: .2;
     }
   }
-
-  &__image {
-    width: 100%;
-    height: auto;
-  }
-
-  & figcaption {
-    @include full-block;
-    text-align: center;
-    backspace-visibility: hidden;
-
-    &:before {
-      @extend %figcaption-before-after-base;
-      border-top: 1px solid white;
-      border-bottom: 1px solid white;
-      transform: scale(0, 1);
-    }
-
-    &:after {
-      @extend %figcaption-before-after-base;
-      border-left: 1px solid white;
-      border-right: 1px solid white;
-      transform: scale(1, 0);
-    }
-
-    & h5 {
-      position: absolute;
-      left: 18%;
-      right: 18%;
-      bottom: 10%;
-      margin-bottom: 0;
-      font-family: $gothamBold, "Trebuchet MS", Tahoma, Verdana, sans-serif;
-      font-weight: 400;
-      font-size: .875rem;
-      line-height: 1.4;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: white;
-      transition: transform .35s;
-      transform: translate3d(0,0,0);
-    }
-
-    & a {
-      @include full-block;
-      z-index: 1000;
-      opacity: 0;
-      font-size: 0;
-    }
-  }
-
 }
 
+.bb_square__item--full {
+  @extend %bb_square__item-base;
+  //display: inline;
+  //max-width: none;
+  //max-height: none;
+}
+
+.bb_square__item--full:hover,
+.bb_square__item:hover {
+
+  & figcaption h4,
+  & figcaption h5 {
+    transform: translate3d(0,-20px,0);
+  }
+
+  & figcaption:before, & figcaption:after {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+  // placeholder
+.bb_square__item--ph {
+  @extend %bb_square__item-base;
+  @extend %bb_square-default-size;
+  opacity: .2;
+}
+
+.bb_square__image {
+  width: 100%;
+  height: auto;
+}
+
+
+.bb_square figcaption {
+  @include full-block;
+  text-align: center;
+  backspace-visibility: hidden;
+
+  &:before {
+    @extend %figcaption-before-after-base;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: scale(0, 1);
+  }
+
+  &:after {
+    @extend %figcaption-before-after-base;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    transform: scale(1, 0);
+  }
+
+  & h5 {
+    position: absolute;
+    left: 18%;
+    right: 18%;
+    bottom: 10%;
+    margin-bottom: 0;
+    font-family: $gothamBold, "Trebuchet MS", Tahoma, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: .875rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+    transition: transform .35s;
+    transform: translate3d(0,0,0);
+  }
+
+  & h4 {
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5%;
+    font-family: "gothammedium";
+    letter-spacing: -1px;
+    line-height: 1.6;
+    transition: transform .35s;
+    transform: translate3d(0,0,0);
+  }
+
+  & a {
+    @include full-block;
+    z-index: 1000;
+    opacity: 0;
+    font-size: 0;
+  }
+}
