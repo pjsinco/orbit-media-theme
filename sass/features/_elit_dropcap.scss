@@ -10,9 +10,21 @@
 }
 
 .dropcap {
+
+  &--gray {
+    color: $gray;
+  }
   
   &--pink {
     color: $pink;
+  }
+
+  &--hotpink {
+    color: $hotpink;
+  }
+
+  &--red {
+    color: $red;
   }
 
   &--blue {

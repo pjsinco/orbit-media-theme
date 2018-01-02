@@ -7981,12 +7981,12 @@ button.close {
     display: none !important;
   }
 }
-/* line 24, ../sass/_vars.scss */
+/* line 27, ../sass/_vars.scss */
 span[class^="fa-"], span[class*=" fa-"], .postsNav span {
   font-family: FontAwesome;
 }
 
-/* line 36, ../sass/_vars.scss */
+/* line 39, ../sass/_vars.scss */
 .glyph {
   border-radius: 50%;
   box-shadow: 0 0 0 8px #f3f4f5, 0 0 5px 8px rgba(0, 0, 0, 0.2);
@@ -11434,14 +11434,26 @@ button.search:hover {
 }
 
 /* line 14, ../sass/features/_elit_dropcap.scss */
+.dropcap--gray {
+  color: #8f8f8f;
+}
+/* line 18, ../sass/features/_elit_dropcap.scss */
 .dropcap--pink {
   color: #d45dcc;
 }
-/* line 18, ../sass/features/_elit_dropcap.scss */
+/* line 22, ../sass/features/_elit_dropcap.scss */
+.dropcap--hotpink {
+  color: #de1a8f;
+}
+/* line 26, ../sass/features/_elit_dropcap.scss */
+.dropcap--red {
+  color: #eb4f4d;
+}
+/* line 30, ../sass/features/_elit_dropcap.scss */
 .dropcap--blue {
   color: #01eaff;
 }
-/* line 22, ../sass/features/_elit_dropcap.scss */
+/* line 34, ../sass/features/_elit_dropcap.scss */
 .dropcap--orange {
   color: #ffaa00;
 }
