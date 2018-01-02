@@ -7981,12 +7981,12 @@ button.close {
     display: none !important;
   }
 }
-/* line 27, ../sass/_vars.scss */
+/* line 28, ../sass/_vars.scss */
 span[class^="fa-"], span[class*=" fa-"], .postsNav span {
   font-family: FontAwesome;
 }
 
-/* line 39, ../sass/_vars.scss */
+/* line 40, ../sass/_vars.scss */
 .glyph {
   border-radius: 50%;
   box-shadow: 0 0 0 8px #f3f4f5, 0 0 5px 8px rgba(0, 0, 0, 0.2);
@@ -11456,6 +11456,10 @@ button.search:hover {
 /* line 34, ../sass/features/_elit_dropcap.scss */
 .dropcap--orange {
   color: #ffaa00;
+}
+/* line 38, ../sass/features/_elit_dropcap.scss */
+.dropcap--bluegreen {
+  color: #00bfcc;
 }
 
 /* line 1, ../sass/features/_elit_related.scss */
