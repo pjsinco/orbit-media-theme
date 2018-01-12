@@ -70,6 +70,10 @@
   &--disabled {
     pointer-events: none;
     cursor: default;
+  
+    & h5 {
+      text-shadow: none !important;
+    }
 
     & img {
       opacity: .2;
@@ -142,6 +146,7 @@
     line-height: 1.4;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-shadow: 1px 1px 1px #353535;
     color: white;
     transition: transform .35s;
     transform: translate3d(0,0,0);
