@@ -173,3 +173,9 @@
     font-size: 0;
   }
 }
+
+// Bit of a workaround
+.bb_square__item.bb_square__item--disabled--full {
+  max-width: none;
+  max-height: none;
+}
