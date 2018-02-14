@@ -67,6 +67,7 @@
   @extend %bb_square__item-base;
   @extend %bb_square-default-size;
 
+  &--disabled--full,
   &--disabled {
     pointer-events: none;
     cursor: default;
