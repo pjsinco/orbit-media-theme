@@ -1491,3 +1491,46 @@ function elit_notify_of_post_status_change($new_status, $old_status, $post) {
   wp_mail( $recipients, $subject, $message, $headers );
 }
 add_action('transition_post_status', 'elit_notify_of_post_status_change', 10, 3);
+
+/**
+ * Whether the current environment is development rather than production.
+ */
+function elit_is_development_env() {
+  return defined( 'DTD_ENV' ) && DTD_ENV === 'development';
+}
+
+function elit_add_google_tag_manager_head_code() {
+  if ( elit_is_development_env() || is_admin() || is_feed() || is_robots() || 
+       is_trackback() ) {
+    return;
+  }
+?>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PJSZNP9');</script>
+<!-- End Google Tag Manager -->'
+
+<?php
+}
+add_action( 'wp_head' , 'elit_add_google_tag_manager_head_code' );
+
+function elit_add_google_tag_manager_page_code() {
+  if ( elit_is_development_env() || is_admin() || is_feed() || is_robots() || 
+       is_trackback() ) {
+    return;
+  }
+?>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJSZNP9"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<?php
+}
+add_action( 'just_opened_body_tag' , 'elit_add_google_tag_manager_page_code' );
+
