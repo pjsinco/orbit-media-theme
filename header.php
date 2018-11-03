@@ -36,7 +36,7 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
     wp_head();
 ?>
 </head>
-<body <?php body_class( $class ); ?>>
+<body <?php body_class(); ?>>
 <?php do_action('just_opened_body_tag'); ?>
 
 <header class="outer-row">
