@@ -205,7 +205,7 @@ function get_layout_class($sidebar = false, $leftPageData = false)
  */
 function getContentByID( $post_id=0, $more_link_text = null, $stripteaser = false ){
     global $post;
-    $post = &get_post($post_id);
+    $post = get_post($post_id);
     setup_postdata( $post, $more_link_text, $stripteaser );
     the_content();
     wp_reset_postdata();
